@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COGIC World Missions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-around h-20">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <!-- Globe/World Icon -->
+                    <div class="relative w-12 h-12">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                            </svg>
+                        </div>
+                        <!-- Small cross/plus icon overlay -->
+                        <div class="absolute -top-1 -right-1 w-4 h-4 bg-yellow-400 rounded-full flex items-center justify-center">
+                            <svg class="w-2 h-2 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <!-- Logo Text -->
+                    <div class="logo-text">
+                        <div class="text-3xl font-bold text-blue-600 tracking-wider">COGIC</div>
+                        <div class="text-lg text-gray-600 uppercase tracking-widest -mt-1">WORLD MISSIONS</div>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="nav-link text-gray-700 font-medium text-lg uppercase tracking-wide">HOME</a>
+                    <a href="#" class="nav-link text-gray-700 font-medium text-lg uppercase tracking-wide">ABOUT</a>
+                    <a href="#" class="nav-link text-gray-700 font-medium text-lg uppercase tracking-wide">LEADERSHIP</a>
+                    <a href="#" class="nav-link text-gray-700 font-medium text-lg uppercase tracking-wide">EVENTS</a>
+                    <a href="#" class="nav-link text-gray-700 font-medium text-lg uppercase tracking-wide">ONLINE TRAINING</a>
+                </nav>
+
+                <!-- Donate Button & Mobile Menu Button -->
+                <div class="flex items-center space-x-4">
+                    <button class="donate-btn text-white px-8 py-3 rounded-full font-semibold text-lg uppercase tracking-wide">
+                        DONATE
+                    </button>
+                    
+                    <!-- Mobile menu button -->
+                    <button class="md:hidden p-2 text-gray-700" onclick="toggleMobileMenu()">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobileMenu" class="mobile-menu md:hidden fixed top-0 right-0 h-full w-80 bg-white shadow-2xl z-50">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-8">
+                    <div class="logo-text">
+                        <div class="text-xl font-bold text-blue-600 tracking-wider">COGIC</div>
+                        <div class="text-xs text-gray-600 uppercase tracking-widest -mt-1">WORLD MISSIONS</div>
+                    </div>
+                    <button onclick="toggleMobileMenu()" class="p-2 text-gray-700">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <nav class="space-y-6">
+                    <a href="#" class="block text-gray-700 font-medium text-sm uppercase tracking-wide py-2 border-b border-gray-100">HOME</a>
+                    <a href="#" class="block text-gray-700 font-medium text-sm uppercase tracking-wide py-2 border-b border-gray-100">ABOUT</a>
+                    <a href="#" class="block text-gray-700 font-medium text-sm uppercase tracking-wide py-2 border-b border-gray-100">LEADERSHIP</a>
+                    <a href="#" class="block text-gray-700 font-medium text-sm uppercase tracking-wide py-2 border-b border-gray-100">EVENTS</a>
+                    <a href="#" class="block text-gray-700 font-medium text-sm uppercase tracking-wide py-2 border-b border-gray-100">ONLINE TRAINING</a>
+                </nav>
+                
+                <div class="mt-8">
+                    <button class="donate-btn text-white px-8 py-3 rounded-full font-semibold text-sm uppercase tracking-wide w-full">
+                        DONATE
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu overlay -->
+        <div id="mobileOverlay" class="hidden md:hidden fixed inset-0 bg-black bg-opacity-50 z-40" onclick="toggleMobileMenu()"></div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="flex justify-center items-center mt-8">
+        <div class="relative w-full max-w-5xl bg-white rounded-2xl shadow-lg overflow-hidden p-1" style="border-radius: 24px;">
+          
+            
+            <!-- Hero Background -->
+            <div class="relative h-[400px] sm:h-[450px] md:h-[500px] overflow-hidden rounded-2xl">
+                <!-- Background Image -->
+                <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" 
+                     style="background-image: url('https://images.unsplash.com/photo-1519491050282-cf00c82424b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80');">
+                </div>
+                <!-- Overlay (less opacity) -->
+                <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                <!-- Content -->
+                <div class="relative z-10 flex items-center justify-center h-full px-4 sm:px-6 lg:px-8">
+                    <div class="text-center text-white w-full">
+                        <!-- Small heading -->
+                        <div 
+                        data-aos="zoom-in" 
+                         data-aos-duration="1500"
+                          class="mb-2">
+                            <span class="inline-block px-4 py-1 text-xs font-medium tracking-widest uppercase bg-white bg-opacity-20 rounded-full backdrop-blur-sm">
+                                COGIC WORLD MISSIONS
+                            </span>
+                        </div>
+                        <!-- Main heading -->
+                        <h1 data-aos="zoom-in" 
+                         data-aos-duration="1500" class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
+                            <span class="block" >Driven By The <span class="italic font-serif text-yellow-300">Love</span></span>
+                            <span class="block" >And <span class="italic font-serif text-yellow-300">Compassion</span></span>
+                            <span class="block" >Of <span class="italic font-serif text-yellow-300">Jesus Christ.</span></span>
+                        </h1>
+                        <!-- Call to action buttons -->
+                        <div data-aos="zoom-in" 
+                         data-aos-duration="1500"
+                         class="flex flex-row gap-3 justify-center items-center mt-6">
+                            <button class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full font-semibold text-sm uppercase tracking-wide transition-all duration-300 shadow-md">
+                                LEARN MORE
+                            </button>
+                            <button class="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-6 py-2 rounded-full font-semibold text-sm uppercase tracking-wide transition-all duration-300">
+                                JOIN
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Who We Are Section -->
+    <section class="w-full py-16 mt-16" style="background: linear-gradient(90deg, #6c63b5 50%, #f8f8fc 50%);">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center">
+        <!-- Image -->
+        <div
+
+        data-aos="zoom-in-right" 
+        data-aos-duration="1000"
+
+        class="flex-shrink-0 w-full md:w-[60%] flex justify-center md:justify-start">
+          <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+               alt="COGIC World Missions outreach work"
+               class="rounded-2xl shadow-lg w-[90%] h-72 md:h-96 object-cover object-left">
+        </div>
+        <!-- Content -->
+        <div
+        
+         data-aos="zoom-in" 
+        data-aos-duration="2000"
+
+        class="w-full md:w-[40%] flex flex-col justify-center items-start px-6 md:px-12 mt-10 md:mt-0">
+          <h2 class="text-3xl md:text-4xl font-bold text-[#23235b] mb-4">Who We Are</h2>
+          <p class="text-base md:text-lg text-gray-700 mb-8">
+            COGIC World Missions exists to fulfill Christ's command to make disciples of all nations. Actively serving in 113 countries under Presiding Bishop J. Drew Sheard, the ministry encourages leaders at every level of the Church of God in Christ to renew their focus on global outreach.
+          </p>
+          <button class="border-2 border-[#23235b] text-[#23235b] px-5 py-2 rounded-full font-semibold text-sm transition hover:bg-[#23235b] hover:text-white">
+            LEARN MORE
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- A Word From The President Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Title -->
+            <div
+            
+               data-aos="zoom-in" 
+        data-aos-duration="2000"
+
+            class="text-center mb-12">
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                    A Word From The President
+                </h2>
+            </div>
+            <!-- Video Player Container -->
+            <div 
+            
+            data-aos="zoom-in" 
+        data-aos-duration="2000"
+
+            class="relative group cursor-pointer" onclick="playVideo()">
+                <!-- Video Placeholder/Thumbnail -->
+                <div class="relative bg-black rounded-3xl overflow-hidden shadow-2xl aspect-video">
+                    <!-- Background for video thumbnail (you can replace with actual video thumbnail) -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-gray-900 to-black flex items-center justify-center">
+                        <!-- Play Button -->
+                        <div class="play-button relative">
+                            <!-- Outer ring with pulse animation -->
+                            <div class="absolute inset-0 bg-white rounded-full opacity-20 animate-ping"></div>
+                            <!-- Main play button -->
+                            <div class="relative w-20 h-20 bg-white rounded-full flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:bg-blue-500">
+                                <!-- Play icon -->
+                                <svg class="w-8 h-8 text-black group-hover:text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Optional: Video title overlay -->
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <div class="bg-black bg-opacity-50 backdrop-blur-sm rounded-lg p-4">
+                                <h3 class="text-white font-semibold text-lg">Message from Presiding Bishop J. Drew Sheard</h3>
+                                <p class="text-gray-300 text-sm mt-1">Learn about our global mission and vision</p>
+                            </div>
+                        </div>
+                        <!-- Decorative elements -->
+                        <div class="absolute top-4 right-4 w-12 h-12 border-2 border-white border-opacity-30 rounded-full"></div>
+                        <div class="absolute bottom-4 left-4 w-8 h-8 border-2 border-white border-opacity-20 rounded-full"></div>
+                    </div>
+                    <!-- Hover overlay -->
+                    <div class="absolute inset-0 bg-blue-600 bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 rounded-3xl"></div>
+                </div>
+                <!-- Video duration badge -->
+                <div class="absolute top-4 left-4 bg-black bg-opacity-70 text-white text-sm px-3 py-1 rounded-full">
+                    5:42
+                </div>
+                <!-- Live/New badge -->
+                <div class="absolute top-4 right-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                    New
+                </div>
+            </div>
+           
+        </div>
+    </section>
+
+   
+    <!-- Video Modal (hidden by default) -->
+    <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden flex items-center justify-center p-4">
+        <div class="relative w-full max-w-4xl">
+            <!-- Close button -->
+            <button onclick="closeVideo()" class="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+            <!-- Video container -->
+            <div class="bg-black rounded-lg overflow-hidden aspect-video">
+                <iframe id="videoFrame" 
+                        class="w-full h-full" 
+                        src="" 
+                        title="A Word From The President" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- COGIC World Missions Giving Section -->
+    <section class="w-full py-16 bg-[#6bbf59] giving-gradient-bg">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center">
+        <!-- Image -->
+        <div 
+        
+        data-aos="zoom-left"
+        data-aos-duration="1500"
+
+        class="flex-shrink-0 w-full md:w-[60%] flex justify-center md:justify-end">
+          <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+               alt="Happy children reaching out their hands - COGIC World Missions impact"
+               class="rounded-2xl shadow-lg w-[100%] h-80 md:h-96 object-cover object-left">
+        </div>
+        <!-- Content -->
+        <div 
+        
+        data-aos="zoom-in"
+        data-aos-duration="2000"
+
+        class="w-full md:w-[40%] flex flex-col justify-center items-start px-6 md:px-12 mt-10 md:mt-0">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">COGIC World Missions Giving</h2>
+          <p class="text-base md:text-lg text-white mb-8">
+            Your gift to COGIC World Missions helps spread the Gospel, support communities in need, and bring hope to people in over 100 countries. Every contribution, big or small, makes a lasting impact. Partner with us today to help change lives around the world.
+          </p>
+          <button class="border-2 border-white text-white px-5 py-2 rounded-full font-semibold text-sm transition hover:bg-white hover:text-[#6bbf59]">
+            GIVE NOW
+          </button>
+        </div>
+      </div>
+    </section>
+
+     <!-- COGIC World Missions Impact Report Section -->
+     <section class="relative w-full py-[10%] overflow-hidden" style="background: url(worldmap.png);">
+      
+      <div class="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between z-10 px-4 md:px-0">
+        <!-- Left Side -->
+        <div 
+         
+        data-aos="zoom-left" 
+        data-aos-duration="1500"
+
+        class="w-full md:w-1/2 flex flex-col items-start justify-center p-4 mb-10 md:mb-0">
+          <h2 class="text-3xl md:text-5xl font-bold text-[#23235b] mb-4 leading-tight">COGIC<br>World Missions<br>Impact Report</h2>
+          <p class="text-base md:text-2xl text-gray-700 mb-8 max-w-md">
+            To recruit, train, and deploy Spirit-Filled servants into all the world to meet the spiritual and natural needs of humanity.
+          </p>
+          <div class="flex flex-row gap-4">
+            <button class="border-2 border-[#23235b] text-[#23235b] px-5 py-2 rounded-full font-semibold text-lg transition hover:bg-[#23235b] hover:text-white">2023 REPORT</button>
+            <button class="border-2 border-[#23235b] text-[#23235b] px-5 py-2 rounded-full font-semibold text-lg transition hover:bg-[#23235b] hover:text-white">2024 REPORT</button>
+          </div>
+        </div>
+        <!-- Right Side -->
+        <div
+        
+        data-aos="zoom-in-up" 
+        data-aos-duration="1000"
+
+        class="w-full md:w-1/2 flex justify-around relative mt-10 md:mt-0">
+          <!-- Report Cover 1 -->
+          <div style="width: 250px; height: 350px;" class="relative z-10 w-36 md:w-48 h-52 md:h-72 rounded-2xl shadow-xl overflow-hidden bg-white transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+            <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="2022 Annual Report Cover" class="w-full h-full object-cover rounded-2xl" />
+          </div>
+          <!-- Report Cover 2 -->
+          <div style="width: 250px; height: 350px;" class="relative z-20 w-36 md:w-48 h-52 md:h-72 rounded-2xl shadow-2xl overflow-hidden bg-white transition-transform duration-300 hover:scale-105 hover:shadow-2xl -ml-6">
+            <img src="https://images.unsplash.com/photo-1519491050282-cf00c82424b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="2023 Annual Impact Report Cover" class="w-full h-full object-cover rounded-2xl" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Subscription Section -->
+    
+    <section 
+    
+    data-aos="zoom-in" 
+        data-aos-duration="1500"
+    
+    class="w-full py-16 bg-white flex flex-col items-center justify-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-2">Stay In The Know!</h2>
+      <p class="text-center text-lg md:text-base  max-w-xl mb-8">
+        Our COGIC World Missions newsletter provides updates on our each mission opportunities. Submit your name and email address to receive our monthly newsletter.
+      </p>
+      <form class="w-full max-w-2xl flex flex-col items-center">
+        <div class="flex flex-col md:flex-row w-full gap-2 mb-6">
+          <input type="text" placeholder="First Name" class="flex-1 border placeholder-black border-black px-4 py-2 rounded-none focus:outline-none" />
+          <input type="text" placeholder="Last Name" class="flex-1 border placeholder-black border-black px-4 py-2 rounded-none focus:outline-none" />
+          <input type="email" placeholder="Email Address" class="flex-1 border placeholder-black border-black px-4 py-2 rounded-none focus:outline-none" />
+        </div>
+        <button type="submit" class="bg-[#6bbf59] text-white px-8 py-2 rounded-full font-semibold transition hover:bg-green-600">Subscribe Now</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+<footer class="bg-[#f7f7f7] py-12 px-6">
+  <div class="max-w-7xl px-[10%] mx-auto grid grid-cols-1 md:grid-cols-5 gap-10">
+    
+    <!-- Logo & Description -->
+    <div class="md:col-span-2">
+      <div class="flex items-center mb-3">
+       
+        <div class="text-5xl  leading-tight tracking-wide" style="line-height: 0.5;">
+          COGIC<br>
+          <span  class=" text-lg  bold font-normal tracking-widest">WORLD MISSIONS</span>
+        </div>
+      </div>
+      <p class="text-sm text-gray-800 leading-relaxed">
+        COGIC World Missions exists to fulfill Christ's command to make disciples of all nations. Actively serving in 113 countries under Presiding Bishop J. Drew Sheard, the ministry encourages leaders at every level of the Church of God in Christ to renew their focus on global outreach. By addressing both spiritual growth and real-world challenges, the mission aims to deepen the church's global impact.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h4 class="font-semibold  text-sm mb-3 uppercase">Quick Links</h4>
+      <ul class="space-y-1 text-sm text-black">
+        <li><a href="#" class="hover:text-[#9F57F6] underline">Home</a></li>
+        <li><a href="#" class="hover:text-[#9F57F6] underline">About</a></li>
+        <li><a href="#" class="hover:text-[#9F57F6] underline">Leadership</a></li>
+        <li><a href="#" class="hover:text-[#9F57F6] underline">Events</a></li>
+        <li><a href="#" class="hover:text-[#9F57F6] underline">Online Training</a></li>
+      </ul>
+    </div>
+
+    <!-- Who We Are -->
+    <div>
+      <h4 class="font-semibold text-sm mb-3 uppercase">Who We Are</h4>
+      <ul class="space-y-1 text-sm text-black">
+        <li><a href="#" class="hover:text-[#9F57F6] underline">Our History</a></li>
+        <li><a href="#" class="hover:text-[#9F57F6] underline">Our Affiliation</a></li>
+        <li><a href="#" class="hover:text-[#9F57F6] underline">COGIC</a></li>
+        <li><a href="#" class="hover:text-[#9F57F6] underline">Statement of Faith</a></li>
+        <li><a href="#" class="hover:text-[#9F57F6] underline">Executive Team</a></li>
+        <li><a href="#" class="hover:text-[#9F57F6] underline">Executive Staff</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div>
+      <h4 class="font-semibold text-sm mb-3 uppercase">Contact Us</h4>
+      <p class="text-sm text-black leading-relaxed">
+        <span class="font-bold">COGIC World Missions</span><br>
+        938 Mason Street<br>
+        Memphis, TN 38126<br><br>
+        Tel: (901) 947-9316<br>
+        yhuaq@cogic.org
+      </p>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="text-center pl-[30%] text-xs text-gray-700 ">
+    Copyright © 2024 TechChurch.io. All Rights Reserved.
+  </div>
+</footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileOverlay = document.getElementById('mobileOverlay');
+            
+            mobileMenu.classList.toggle('active');
+            mobileOverlay.classList.toggle('hidden');
+        }
+        
+        function playVideo() {
+            const modal = document.getElementById('videoModal');
+            const videoFrame = document.getElementById('videoFrame');
+            
+            // Replace with actual video URL - using placeholder for demo
+            const videoUrl = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0";
+            
+            videoFrame.src = videoUrl;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeVideo() {
+            const modal = document.getElementById('videoModal');
+            const videoFrame = document.getElementById('videoFrame');
+            
+            videoFrame.src = '';
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close video when clicking outside
+        document.getElementById('videoModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeVideo();
+            }
+        });
+    </script>
+</body>
+</html>
