@@ -48,9 +48,9 @@
 
                 <!-- Donate Button & Mobile Menu Button -->
                 <div class="flex items-center space-x-4">
-                    <button class="donate-btn text-white px-8 py-3 rounded-full font-semibold text-lg uppercase tracking-wide">
-                        DONATE
-                    </button>
+                    <button class="hidden sm:block donate-btn text-white px-8 py-3 rounded-full font-semibold text-lg uppercase tracking-wide">
+    DONATE
+</button>
                     
                     <!-- Mobile menu button -->
                     <button class="md:hidden p-2 text-gray-700" onclick="toggleMobileMenu()">
@@ -101,19 +101,17 @@
     <main class="flex justify-center items-center mt-8">
         <div class="relative w-full max-w-6xl bg-white rounded-2xl shadow-lg overflow-hidden p-1" style="border-radius: 24px;">
           
-            
-            <!-- Hero Background -->
             <div class="relative h-[400px] sm:h-[450px] md:h-[500px] overflow-hidden rounded-2xl">
-                <!-- Background Image -->
+             
                 <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" 
                      style="background-image: url('https://images.unsplash.com/photo-1519491050282-cf00c82424b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80');">
                 </div>
-                <!-- Overlay (less opacity) -->
+               
                 <div class="absolute inset-0 bg-black bg-opacity-20"></div>
-                <!-- Content -->
+                
                 <div class="relative z-10 flex items-center justify-center h-full px-4 sm:px-6 lg:px-8">
                     <div class="text-center text-white w-full">
-                        <!-- Small heading -->
+                      
                         <div 
                         data-aos="zoom-in" 
                          data-aos-duration="1500"
@@ -122,14 +120,14 @@
                                 COGIC WORLD MISSIONS
                             </span>
                         </div>
-                        <!-- Main heading -->
+                     
                         <h1 data-aos="zoom-in" 
                          data-aos-duration="1500" class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
                             <span class="block" >Driven By The <span class="italic font-serif text-yellow-300">Love</span></span>
                             <span class="block" >And <span class="italic font-serif text-yellow-300">Compassion</span></span>
                             <span class="block" >Of <span class="italic font-serif text-yellow-300">Jesus Christ.</span></span>
                         </h1>
-                        <!-- Call to action buttons -->
+                     
                         <div data-aos="zoom-in" 
                          data-aos-duration="1500"
                          class="flex flex-row gap-3 justify-center items-center mt-6">
@@ -147,9 +145,9 @@
     </main>
 
     <!-- Who We Are Section -->
-    <section class="w-full py-16 mt-16" style="background: linear-gradient(90deg, #6c63b5 50%, #f8f8fc 50%);">
+    <section class="w-full py-16 mt-16 bg-[#6c63b5] giving-gradient-bgg" >
       <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center">
-        <!-- Image -->
+       
         <div
 
         data-aos="zoom-in-right" 
@@ -160,7 +158,7 @@
                alt="COGIC World Missions outreach work"
                class="rounded-2xl shadow-lg w-[90%] h-72 md:h-96 object-cover object-left">
         </div>
-        <!-- Content -->
+        
         <div
         
          data-aos="zoom-in" 
@@ -181,7 +179,7 @@
     <!-- A Word From The President Section -->
     <section class="py-20 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Section Title -->
+         
             <div
             
                data-aos="zoom-in" 
@@ -192,48 +190,48 @@
                     A Word From The President
                 </h2>
             </div>
-            <!-- Video Player Container -->
+            
             <div 
             
             data-aos="zoom-in" 
         data-aos-duration="2000"
 
             class="relative group cursor-pointer" onclick="playVideo()">
-                <!-- Video Placeholder/Thumbnail -->
+             
                 <div class="relative bg-black rounded-3xl overflow-hidden shadow-2xl aspect-video">
-                    <!-- Background for video thumbnail (you can replace with actual video thumbnail) -->
+                    
                     <div class="absolute inset-0 bg-gradient-to-br from-gray-900 to-black flex items-center justify-center">
-                        <!-- Play Button -->
+                        
                         <div class="play-button relative">
-                            <!-- Outer ring with pulse animation -->
+                            
                             <div class="absolute inset-0 bg-white rounded-full opacity-20 animate-ping"></div>
-                            <!-- Main play button -->
+                            
                             <div class="relative w-20 h-20 bg-white rounded-full flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:bg-blue-500">
-                                <!-- Play icon -->
+                                
                                 <svg class="w-8 h-8 text-black group-hover:text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M8 5v14l11-7z"/>
                                 </svg>
                             </div>
                         </div>
-                        <!-- Optional: Video title overlay -->
+                       
                         <div class="absolute bottom-6 left-6 right-6">
                             <div class="bg-black bg-opacity-50 backdrop-blur-sm rounded-lg p-4">
                                 <h3 class="text-white font-semibold text-lg">Message from Presiding Bishop J. Drew Sheard</h3>
                                 <p class="text-gray-300 text-sm mt-1">Learn about our global mission and vision</p>
                             </div>
                         </div>
-                        <!-- Decorative elements -->
+                    
                         <div class="absolute top-4 right-4 w-12 h-12 border-2 border-white border-opacity-30 rounded-full"></div>
                         <div class="absolute bottom-4 left-4 w-8 h-8 border-2 border-white border-opacity-20 rounded-full"></div>
                     </div>
-                    <!-- Hover overlay -->
+                 
                     <div class="absolute inset-0 bg-blue-600 bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 rounded-3xl"></div>
                 </div>
-                <!-- Video duration badge -->
+              
                 <div class="absolute top-4 left-4 bg-black bg-opacity-70 text-white text-sm px-3 py-1 rounded-full">
                     5:42
                 </div>
-                <!-- Live/New badge -->
+               
                 <div class="absolute top-4 right-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
                     New
                 </div>
@@ -318,22 +316,32 @@
             <button class="border-2 border-[#23235b] text-[#23235b] px-5 py-2 rounded-full font-semibold text-lg transition hover:bg-[#23235b] hover:text-white">2024 REPORT</button>
           </div>
         </div>
+        
         <!-- Right Side -->
         <div
-        
-        data-aos="zoom-in-up" 
-        data-aos-duration="1000"
+  data-aos="zoom-in-up"
+  data-aos-duration="1000"
+  class="w-full md:w-1/2 flex flex-col md:flex-row items-center justify-center gap-10 relative mt-10 md:mt-0"
+>
+  <!-- Report Cover 1 -->
+  <div class="relative z-10 w-60 h-[350px] rounded-2xl shadow-xl overflow-hidden bg-white transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+    <img
+      src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+      alt="2022 Annual Report Cover"
+      class="w-full h-full object-cover rounded-2xl"
+    />
+  </div>
 
-        class="w-full md:w-1/2 flex justify-around relative mt-10 md:mt-0">
-          <!-- Report Cover 1 -->
-          <div style="width: 250px; height: 350px;" class="relative z-10 w-36 md:w-48 h-52 md:h-72 rounded-2xl shadow-xl overflow-hidden bg-white transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-            <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="2022 Annual Report Cover" class="w-full h-full object-cover rounded-2xl" />
-          </div>
-          <!-- Report Cover 2 -->
-          <div style="width: 250px; height: 350px;" class="relative z-20 w-36 md:w-48 h-52 md:h-72 rounded-2xl shadow-2xl overflow-hidden bg-white transition-transform duration-300 hover:scale-105 hover:shadow-2xl -ml-6">
-            <img src="https://images.unsplash.com/photo-1519491050282-cf00c82424b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="2023 Annual Impact Report Cover" class="w-full h-full object-cover rounded-2xl" />
-          </div>
-        </div>
+  <!-- Report Cover 2 -->
+  <div class="relative z-20 w-60 h-[350px] rounded-2xl shadow-2xl overflow-hidden bg-white transition-transform duration-300 hover:scale-105 hover:shadow-2xl md:-ml-6">
+    <img
+      src="https://images.unsplash.com/photo-1519491050282-cf00c82424b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+      alt="2023 Annual Impact Report Cover"
+      class="w-full h-full object-cover rounded-2xl"
+    />
+  </div>
+</div>
+
       </div>
     </section>
 
@@ -344,7 +352,7 @@
     data-aos="zoom-in" 
         data-aos-duration="1500"
     
-    class="w-full py-16 bg-white flex flex-col items-center justify-center">
+    class="w-full py-16 px-10 bg-white flex flex-col items-center justify-center">
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-2">Stay In The Know!</h2>
       <p class="text-center text-lg md:text-base  max-w-xl mb-8">
         Our COGIC World Missions newsletter provides updates on our each mission opportunities. Submit your name and email address to receive our monthly newsletter.

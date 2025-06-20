@@ -103,4 +103,7 @@
             .giving-gradient-bg {
                 background: linear-gradient(90deg, #fff 50%, #6bbf59 50%);
             }
+            .giving-gradient-bgg {
+                background: linear-gradient(90deg, #6c63b5 50%, #f8f8fc 50%);
+            }
         }
