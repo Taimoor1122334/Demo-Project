@@ -4,159 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COGIC World Missions</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
-      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <link rel="stylesheet" href="assets/output.css">
+      <link rel="stylesheet" href="assets/aos.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-50">
-    <!-- Header -->
-    <header class="bg-white shadow-sm border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-around h-20">
-                <!-- Logo -->
-                <div class="flex items-center space-x-3">
-                    <!-- Globe/World Icon -->
-                    <div class="relative w-12 h-12">
-                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
-                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-                            </svg>
-                        </div>
-                        <!-- Small cross/plus icon overlay -->
-                        <div class="absolute -top-1 -right-1 w-4 h-4 bg-yellow-400 rounded-full flex items-center justify-center">
-                            <svg class="w-2 h-2 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    
-                    <!-- Logo Text -->
-                    <div class="logo-text">
-                        <div class="text-3xl font-bold text-blue-600 tracking-wider">COGIC</div>
-                        <div class="text-lg text-gray-600 uppercase tracking-widest -mt-1">WORLD MISSIONS</div>
-                    </div>
-                </div>
+<body style="background-color: #F2F2F2;">
 
-                <!-- Desktop Navigation -->
-                <nav class="hidden md:flex items-center space-x-8">
-                    <a href="#" class="nav-link text-gray-700 font-medium text-lg uppercase tracking-wide">HOME</a>
-                    <a href="#" class="nav-link text-gray-700 font-medium text-lg uppercase tracking-wide">ABOUT</a>
-                    <a href="#" class="nav-link text-gray-700 font-medium text-lg uppercase tracking-wide">LEADERSHIP</a>
-                    <a href="#" class="nav-link text-gray-700 font-medium text-lg uppercase tracking-wide">EVENTS</a>
-                    <a href="#" class="nav-link text-gray-700 font-medium text-lg uppercase tracking-wide">ONLINE TRAINING</a>
-                </nav>
+    <nav class="bg-white shadow-lg px-3 py-3 md:px-0" >
+  <div class="max-w-full mx-auto py-5  sm:px-6 lg:px-12 flex items-center justify-between h-20">
+    
+    <!-- Logo Section -->
+    <div class="flex items-center space-x-1  ">
+      <img src="logo.png" alt="Logo" class="h-15 w-auto">
+     
+    </div>
 
-                <!-- Donate Button & Mobile Menu Button -->
-                <div class="flex items-center space-x-4">
-                    <button class="hidden sm:block donate-btn text-white px-8 py-3 rounded-full font-semibold text-lg uppercase tracking-wide">
-    DONATE
-</button>
-                    
-                    <!-- Mobile menu button -->
-                    <button class="md:hidden p-2 text-gray-700" onclick="toggleMobileMenu()">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
+    <!-- Desktop Navigation -->
+     <div class="hidden md:flex w-4xl items-center mx-2 justify-around border-2 border-black rounded-full px-12 py-2 space-x-6" style="font-family: poppins;"  >
+      <a href="#" class="nav-link  uppercase  text-[#21B803]" data-link="home">Home</a>
+      <a href="#" class="nav-link  uppercase  hover:text-[#21B803]" data-link="leadership">Leadership</a>
+      <a href="#" class="nav-link  uppercase   hover:text-[#21B803]" data-link="yoam">Y.O.A.M.</a>
+      <a href="#" class="nav-link  uppercase  hover:text-[#21B803]" data-link="where">Where We Are</a>
+      <a href="#" class="nav-link  uppercase  hover:text-[#21B803]" data-link="ondemand">On Demand</a>
+      <a href="#" class="nav-link  uppercase  hover:text-[#21B803]" data-link="give">Give</a>
+    </div>
 
-        <!-- Mobile Navigation -->
-        <div id="mobileMenu" class="mobile-menu md:hidden fixed top-0 right-0 h-full w-80 bg-white shadow-2xl z-50">
-            <div class="p-6">
-                <div class="flex justify-between items-center mb-8">
-                    <div class="logo-text">
-                        <div class="text-xl font-bold text-blue-600 tracking-wider">COGIC</div>
-                        <div class="text-xs text-gray-600 uppercase tracking-widest -mt-1">WORLD MISSIONS</div>
-                    </div>
-                    <button onclick="toggleMobileMenu()" class="p-2 text-gray-700">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                        </svg>
-                    </button>
-                </div>
-                
-                <nav class="space-y-6">
-                    <a href="#" class="block text-gray-700 font-medium text-sm uppercase tracking-wide py-2 border-b border-gray-100">HOME</a>
-                    <a href="#" class="block text-gray-700 font-medium text-sm uppercase tracking-wide py-2 border-b border-gray-100">ABOUT</a>
-                    <a href="#" class="block text-gray-700 font-medium text-sm uppercase tracking-wide py-2 border-b border-gray-100">LEADERSHIP</a>
-                    <a href="#" class="block text-gray-700 font-medium text-sm uppercase tracking-wide py-2 border-b border-gray-100">EVENTS</a>
-                    <a href="#" class="block text-gray-700 font-medium text-sm uppercase tracking-wide py-2 border-b border-gray-100">ONLINE TRAINING</a>
-                </nav>
-                
-                <div class="mt-8">
-                    <button class="donate-btn text-white px-8 py-3 rounded-full font-semibold text-sm uppercase tracking-wide w-full">
-                        DONATE
-                    </button>
-                </div>
-            </div>
-        </div>
+    <!-- Social Icons -->
+ <div class="hidden md:flex items-center space-x-2">
+  <a href="#" class="text-black">
+    <img src="fb-icon.png" alt="facebook" class="h-5 sm:h-6 md:h-8 lg:h-10 w-auto cursor-pointer">
+  </a>
+  <a href="#" class="text-black">
+    <img src="insta-icon.png" alt="instagram" class="h-5 sm:h-6 md:h-8 lg:h-10 w-auto cursor-pointer">
+  </a>
+</div>
 
-        <!-- Mobile menu overlay -->
-        <div id="mobileOverlay" class="hidden md:hidden fixed inset-0 bg-black bg-opacity-50 z-40" onclick="toggleMobileMenu()"></div>
-    </header>
+    <!-- Hamburger (Mobile) -->
+    <div class="md:hidden">
+      <button onclick="toggleMenu()">
+        <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="md:hidden hidden px-4 py-4 border-t">
+    <nav class="flex flex-col space-y-4 text-sm  uppercase">
+      <a href="#" class="hover:text-[#21B803]">Home</a>
+      <a href="#" class="hover:text-[#21B803]">Leadership</a>
+      <a href="#" class="hover:text-[#21B803]">Y.O.A.M.</a>
+      <a href="#" class="hover:text-[#21B803]">Where We Are</a>
+      <a href="#" class="hover:text-[#21B803]">On Demand</a>
+      <a href="#" class="hover:text-[#21B803]">Give</a>
+      <div class="flex space-x-4 pt-4 border-t mt-2">
+        <a href="#"><img src="fb-icon.png" alt="facebook" class="h-10 w-auto"></a>
+        <a href="#"><img src="insta-icon.png" alt="instagram" class="h-10 w-auto"></a>
+      </div>
+    </nav>
+  </div>
+</nav>
+
 
     <!-- Hero Section -->
-    <main class="flex justify-center items-center mt-8">
-        <div class="relative w-full max-w-6xl bg-white rounded-2xl shadow-lg overflow-hidden p-1" style="border-radius: 24px;">
+   <main class="flex justify-center items-center">
+  <div class="relative rounded-3xl w-full md:px-12 overflow-hidden p-1">
+    
+    <!-- Background Image Container -->
+    <div class="relative h-[400px] sm:h-[450px] md:h-[550px] lg:h-[650px] overflow-hidden rounded-3xl">
+      
+      <!-- Background Image -->
+      <div
+        class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style="background-image: url('hero-image.png');">'
+
+      <!-- Black transparent overlay -->
+      <div class="rounded-3xl absolute inset-0 bg-black/50"></div>
+
+      <!-- Main content -->
+      <div class="relative z-10 flex items-center justify-center h-full px-4 sm:px-6 lg:px-8">
+        <div class="text-center text-white w-3xl">
           
-            <div class="relative h-[400px] sm:h-[450px] md:h-[500px] overflow-hidden rounded-2xl">
-             
-                <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" 
-                     style="background-image: url('https://images.unsplash.com/photo-1519491050282-cf00c82424b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80');">
-                </div>
-               
-                <div class="absolute inset-0 bg-black bg-opacity-20"></div>
-                
-                <div class="relative z-10 flex items-center justify-center h-full px-4 sm:px-6 lg:px-8">
-                    <div class="text-center text-white w-full">
-                      
-                        <div 
-                        data-aos="zoom-in" 
-                         data-aos-duration="1500"
-                          class="mb-2">
-                            <span class="inline-block px-4 py-1 text-xs font-medium tracking-widest uppercase bg-white bg-opacity-20 rounded-full backdrop-blur-sm">
-                                COGIC WORLD MISSIONS
-                            </span>
-                        </div>
-                     
-                        <h1 data-aos="zoom-in" 
-                         data-aos-duration="1500" class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
-                            <span class="block" >Driven By The <span class="italic font-serif text-yellow-300">Love</span></span>
-                            <span class="block" >And <span class="italic font-serif text-yellow-300">Compassion</span></span>
-                            <span class="block" >Of <span class="italic font-serif text-yellow-300">Jesus Christ.</span></span>
-                        </h1>
-                     
-                        <div data-aos="zoom-in" 
-                         data-aos-duration="1500"
-                         class="flex flex-row gap-3 justify-center items-center mt-6">
-                            <button class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full font-semibold text-sm uppercase tracking-wide transition-all duration-300 shadow-md">
-                                LEARN MORE
-                            </button>
-                            <button class="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-6 py-2 rounded-full font-semibold text-sm uppercase tracking-wide transition-all duration-300">
-                                JOIN
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+          <!-- Headline -->
+          <h1 data-aos="zoom-in" data-aos-duration="1500"
+              class=" heading  text-3xl sm:text-4xl md:text-7xl font-bold leading-tight mb-4">
+           <span >
+             Making Disciples.<br>
+Planting Churches.<br>
+Serving the Nations.
+           </span>
+           <img src="brush mark.png" class="float-end" >
+          </h1><br>
+
+          
+          <div 
+               class=" mt-2 text-2xl capitalize " style="font-family: poppins;"  >
+            <p>Missions is not a place to shine. It is a place to serve!</p>
+            <button  class="capitalize cursor-pointer text-lg  bg-[#21B803] rounded-full px-7 py-1 hover:bg-green-500 transition duration-300 mt-4">
+              learn more
+            </button>
+          </div>
+
         </div>
-    </main>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!----Live on youtube----->
+
+    
+   <section class="flex my-5 md:my-20 justify-center items-center">
+  <div class="relative rounded-3xl w-full md:px-12 overflow-hidden p-1">
+    
+    <!-- Background Image Container -->
+    <div class="relative h-[200px] sm:h-[250px] md:h-[300px] lg:h-[250px] overflow-hidden rounded-3xl">
+      
+      <!-- Background Image -->
+      <div
+        class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style="background-image: url('cwm yt.png');">
+      </div>
+
+      <!-- Black transparent overlay -->
+      <div class="rounded-3xl absolute inset-0 bg-black/70"></div>
+
+      <!-- Main content -->
+      <div class="relative z-10 flex flex-col sm:flex-row gap-4 sm:gap-10 items-center justify-center h-full">
+        <h2 class="text-xl sm:text-3xl md:text-6xl font-semibold text-white text-center">Click to Watch Live on</h2>
+        <img src="YouTube_logo_(2017).png" class="h-10 md:h-14" alt="YouTube">
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
     <!-- Who We Are Section -->
-    <section class="w-full py-16 mt-16 bg-[#6c63b5] giving-gradient-bgg" >
-      <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center">
+    <section class="w-full  my-16 " >
+      <div class="w-full px-2 md:px-12 mx-auto flex flex-col md:flex-row items-center justify-center">
        
         <div
 
         data-aos="zoom-in-right" 
         data-aos-duration="1000"
 
-        class="flex-shrink-0 w-full md:w-[60%] flex justify-center md:justify-start">
-          <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+        class="flex-shrink-0 w-full md:w-[60%]   ">
+          <img src="who-we are.png"
                alt="COGIC World Missions outreach work"
-               class="rounded-2xl shadow-lg w-[90%] h-72 md:h-96 object-cover object-left">
+               class="rounded-2xl shadow-lg w-[90%] h-full object-cover object-left">
         </div>
         
         <div
@@ -164,109 +166,97 @@
          data-aos="zoom-in" 
         data-aos-duration="2000"
 
-        class="w-full md:w-[40%] flex flex-col justify-center items-start px-6 md:px-12 mt-10 md:mt-0">
-          <h2 class="text-3xl md:text-4xl font-bold text-[#23235b] mb-4">Who We Are</h2>
-          <p class="text-base md:text-lg text-gray-700 mb-8">
-            COGIC World Missions exists to fulfill Christ's command to make disciples of all nations. Actively serving in 113 countries under Presiding Bishop J. Drew Sheard, the ministry encourages leaders at every level of the Church of God in Christ to renew their focus on global outreach.
+        class="px-5 py-2">
+          <h2 class="text-3xl md:text-5xl font-bold heading  mb-4">Who We Are</h2>
+          <p class="text-base md:text-2xl  mb-8" style="font-family: poppins;">
+            At COGIC World Missions, our vision is to make disciples in every nation. We are committed to holistic evangelism, leadership empowerment, and raising up kingdom partners across generations. Through strategic outreach and intentional partnerships, we equip spirit-filled believers to go, serve  and make a lasting impact.
           </p>
-          <button class="border-2 border-[#23235b] text-[#23235b] px-5 py-2 rounded-full font-semibold text-sm transition hover:bg-[#23235b] hover:text-white">
+          <button class="border-2 mt-2 md:mt-30  px-5 py-2 rounded-full font-semibold text-sm transition hover:bg-[#23235b] hover:text-white">
             LEARN MORE
           </button>
         </div>
       </div>
     </section>
 
-    <!-- A Word From The President Section -->
-    <section class="py-20 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-         
-            <div
-            
-               data-aos="zoom-in" 
-        data-aos-duration="2000"
+    <!-- youth on a mission -->
 
-            class="text-center mb-12">
-                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                    A Word From The President
-                </h2>
-            </div>
-            
-            <div 
-            
-            data-aos="zoom-in" 
-        data-aos-duration="2000"
+      <section class="flex my-5 md:my-20 justify-center items-center">
+  <div class="relative rounded-3xl w-full md:px-12 overflow-hidden p-1">
+    
+    <!-- Background Image Container -->
+    <div class="relative h-[200px] sm:h-[250px] md:h-[300px] lg:h-[250px] overflow-hidden rounded-3xl">
+      
+      <!-- Background Image -->
+      <div
+        class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style="background-image: url('yoam-img.png');">
+      </div>
 
-            class="relative group cursor-pointer" onclick="playVideo()">
-             
-                <div class="relative bg-black rounded-3xl overflow-hidden shadow-2xl aspect-video">
-                    
-                    <div class="absolute inset-0 bg-gradient-to-br from-gray-900 to-black flex items-center justify-center">
-                        
-                        <div class="play-button relative">
-                            
-                            <div class="absolute inset-0 bg-white rounded-full opacity-20 animate-ping"></div>
-                            
-                            <div class="relative w-20 h-20 bg-white rounded-full flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:bg-blue-500">
-                                
-                                <svg class="w-8 h-8 text-black group-hover:text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M8 5v14l11-7z"/>
-                                </svg>
-                            </div>
-                        </div>
-                       
-                        <div class="absolute bottom-6 left-6 right-6">
-                            <div class="bg-black bg-opacity-50 backdrop-blur-sm rounded-lg p-4">
-                                <h3 class="text-white font-semibold text-lg">Message from Presiding Bishop J. Drew Sheard</h3>
-                                <p class="text-gray-300 text-sm mt-1">Learn about our global mission and vision</p>
-                            </div>
-                        </div>
-                    
-                        <div class="absolute top-4 right-4 w-12 h-12 border-2 border-white border-opacity-30 rounded-full"></div>
-                        <div class="absolute bottom-4 left-4 w-8 h-8 border-2 border-white border-opacity-20 rounded-full"></div>
-                    </div>
-                 
-                    <div class="absolute inset-0 bg-blue-600 bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 rounded-3xl"></div>
-                </div>
-              
-                <div class="absolute top-4 left-4 bg-black bg-opacity-70 text-white text-sm px-3 py-1 rounded-full">
-                    5:42
-                </div>
-               
-                <div class="absolute top-4 right-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
-                    New
-                </div>
-            </div>
-           
-        </div>
-    </section>
+      <!-- Black transparent overlay -->
+      <div class="rounded-3xl absolute inset-0 bg-black/80"></div>
 
-   
-    <!-- Video Modal (hidden by default) -->
-    <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden flex items-center justify-center p-4">
-        <div class="relative w-full max-w-4xl">
-            <!-- Close button -->
-            <button onclick="closeVideo()" class="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                </svg>
-            </button>
-            <!-- Video container -->
-            <div class="bg-black rounded-lg overflow-hidden aspect-video">
-                <iframe id="videoFrame" 
-                        class="w-full h-full" 
-                        src="" 
-                        title="A Word From The President" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                </iframe>
-            </div>
-        </div>
+      <!-- Main content -->
+      <div class="relative z-10 flex flex-col sm:flex-row gap-4 sm:gap-10 items-center justify-center h-full">
+        <img src="yoam.png" class="h-20  md:h-40" alt="yoam">
+         <h2 class="text-xl sm:text-3xl md:text-5xl text-white  font-semibold text-center heading" >Youth on a mission: upcoming trips</h2>
+      </div>
     </div>
+  </div>
+</section>
+
+    
+<!-- video section -->
+<section class="py-20 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12" data-aos="zoom-in" data-aos-duration="2000">
+      <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+        A Word From The President
+      </h2>
+    </div>
+
+    <!-- Video Thumbnail -->
+    <div onclick="playVideo()" class="relative group cursor-pointer" data-aos="zoom-in" data-aos-duration="2000">
+      <div class="relative rounded-2xl overflow-hidden shadow-xl aspect-video bg-gradient-to-b from-[#0d1117] to-black">
+
+        <!-- Centered Play Button -->
+        <div class="absolute inset-0 flex items-center justify-center z-10">
+          <div class="relative w-26 h-26  border-white border-4 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+            <svg class="w-12 h-12 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="videoModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black bg-opacity-90 backdrop-blur-sm">
+  <div class="relative w-full max-w-4xl mx-4">
+    <!-- Close Button -->
+    <button onclick="closeVideo()" class="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <!-- Video -->
+    <div class="relative overflow-hidden rounded-lg bg-black aspect-video shadow-2xl">
+      <iframe id="videoFrame"
+              class="absolute top-0 left-0 w-full h-full"
+              src=""
+              title="A Word From The President"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</div>
 
     <!-- COGIC World Missions Giving Section -->
     <section class="w-full py-16 bg-[#6bbf59] giving-gradient-bg">
-      <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center">
+      <div class="w-full px-2 md:px-12 flex flex-col md:flex-row items-center justify-center">
         <!-- Image -->
         <div 
         
@@ -296,55 +286,7 @@
       </div>
     </section>
 
-     <!-- COGIC World Missions Impact Report Section -->
-     <section class="relative w-full py-[10%] overflow-hidden" style="background: url(worldmap.png);">
-      
-      <div class="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between z-10 px-4 md:px-0">
-        <!-- Left Side -->
-        <div 
-         
-        data-aos="zoom-left" 
-        data-aos-duration="1500"
-
-        class="w-full md:w-1/2 flex flex-col items-start justify-center p-4 mb-10 md:mb-0">
-          <h2 class="text-3xl md:text-5xl font-bold text-[#23235b] mb-4 leading-tight">COGIC<br>World Missions<br>Impact Report</h2>
-          <p class="text-base md:text-2xl text-gray-700 mb-8 max-w-md">
-            To recruit, train, and deploy Spirit-Filled servants into all the world to meet the spiritual and natural needs of humanity.
-          </p>
-          <div class="flex flex-row gap-4">
-            <button class="border-2 border-[#23235b] text-[#23235b] px-5 py-2 rounded-full font-semibold text-lg transition hover:bg-[#23235b] hover:text-white">2023 REPORT</button>
-            <button class="border-2 border-[#23235b] text-[#23235b] px-5 py-2 rounded-full font-semibold text-lg transition hover:bg-[#23235b] hover:text-white">2024 REPORT</button>
-          </div>
-        </div>
-        
-        <!-- Right Side -->
-        <div
-  data-aos="zoom-in-up"
-  data-aos-duration="1000"
-  class="w-full md:w-1/2 flex flex-col md:flex-row items-center justify-center gap-10 relative mt-10 md:mt-0"
->
-  <!-- Report Cover 1 -->
-  <div class="relative z-10 w-60 h-[350px] rounded-2xl shadow-xl overflow-hidden bg-white transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-    <img
-      src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
-      alt="2022 Annual Report Cover"
-      class="w-full h-full object-cover rounded-2xl"
-    />
-  </div>
-
-  <!-- Report Cover 2 -->
-  <div class="relative z-20 w-60 h-[350px] rounded-2xl shadow-2xl overflow-hidden bg-white transition-transform duration-300 hover:scale-105 hover:shadow-2xl md:-ml-6">
-    <img
-      src="https://images.unsplash.com/photo-1519491050282-cf00c82424b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
-      alt="2023 Annual Impact Report Cover"
-      class="w-full h-full object-cover rounded-2xl"
-    />
-  </div>
-</div>
-
-      </div>
-    </section>
-
+  
     <!-- Newsletter Subscription Section -->
     
     <section 
@@ -369,13 +311,13 @@
 
     <!-- Footer -->
 <footer class="bg-[#f7f7f7] py-12 px-6">
-  <div class="max-w-7xl px-[10%] mx-auto grid grid-cols-1 md:grid-cols-5 gap-10">
+  <div class="max-w-7xl px-[5%] mx-auto grid grid-cols-1 md:grid-cols-5 gap-10">
     
     <!-- Logo & Description -->
     <div class="md:col-span-2">
       <div class="flex items-center mb-3">
        
-        <div class="text-5xl  leading-tight tracking-wide" style="line-height: 0.5;">
+        <div class="text-5xl  leading-tight tracking-wide" >
           COGIC<br>
           <span  class=" text-lg  bold font-normal tracking-widest">WORLD MISSIONS</span>
         </div>
@@ -429,47 +371,9 @@
   </div>
 </footer>
 
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  <script src="assets/aos.js"></script>
+  <script src="assets/script.js"></script>
 
-    <script>
-        function toggleMobileMenu() {
-            const mobileMenu = document.getElementById('mobileMenu');
-            const mobileOverlay = document.getElementById('mobileOverlay');
-            
-            mobileMenu.classList.toggle('active');
-            mobileOverlay.classList.toggle('hidden');
-        }
-        
-        function playVideo() {
-            const modal = document.getElementById('videoModal');
-            const videoFrame = document.getElementById('videoFrame');
-            
-            // Replace with actual video URL - using placeholder for demo
-            const videoUrl = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0";
-            
-            videoFrame.src = videoUrl;
-            modal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-        }
-        
-        function closeVideo() {
-            const modal = document.getElementById('videoModal');
-            const videoFrame = document.getElementById('videoFrame');
-            
-            videoFrame.src = '';
-            modal.classList.add('hidden');
-            document.body.style.overflow = 'auto';
-        }
-        
-        // Close video when clicking outside
-        document.getElementById('videoModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeVideo();
-            }
-        });
-    </script>
+
 </body>
 </html>
