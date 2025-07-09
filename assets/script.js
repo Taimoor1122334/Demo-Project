@@ -1,25 +1,6 @@
   AOS.init();
 
- document.addEventListener("DOMContentLoaded", () => {
-    const links = document.querySelectorAll(".nav-link");
 
-    links.forEach(link => {
-      link.addEventListener("click", (e) => {
-        links.forEach(l => l.classList.remove("active")); // remove from all
-        e.currentTarget.classList.add("active"); // add to clicked
-      });
-    });
-  });
-
-
-        function toggleMobileMenu() {
-            const mobileMenu = document.getElementById('mobileMenu');
-            const mobileOverlay = document.getElementById('mobileOverlay');
-            
-            mobileMenu.classList.toggle('active');
-            mobileOverlay.classList.toggle('hidden');
-        }
-        
     function playVideo() {
     const modal = document.getElementById('videoModal');
     const iframe = document.getElementById('videoFrame');
@@ -49,8 +30,28 @@
     });
   });
 
-    function toggleMenu() {
-    const menu = document.getElementById("mobileMenu");
-    menu.classList.toggle("hidden");
+
+  function toggleMenu() {
+    const mobileMenu = document.getElementById("mobileMenu");
+    const menuIconPath = document.getElementById("menuIconPath");
+
+    // Toggle visibility
+    mobileMenu.classList.toggle("hidden");
+
+    // Toggle icon between hamburger and X
+    const isMenuOpen = !mobileMenu.classList.contains("hidden");
+    if (isMenuOpen) {
+      menuIconPath.setAttribute("d", "M6 18L18 6M6 6l12 12"); // Cross icon
+    } else {
+      menuIconPath.setAttribute("d", "M4 6h16M4 12h16M4 18h16"); // Hamburger
+    }
   }
+
+  // Close mobile menu on link click
+  document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById("mobileMenu").classList.add("hidden");
+      document.getElementById("menuIconPath").setAttribute("d", "M4 6h16M4 12h16M4 18h16");
+    });
+  });
         

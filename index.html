@@ -13,62 +13,58 @@
 </head>
 <body style="background-color: #F2F2F2;">
 
-    <nav class="bg-white shadow-lg px-3 py-3 md:px-0" >
-  <div class="max-w-full mx-auto py-5  sm:px-6 lg:px-12 flex items-center justify-between h-20">
-    
-    <!-- Logo Section -->
-    <div class="flex items-center space-x-1  ">
-      <img src="logo.png" alt="Logo" class="h-15 w-auto">
-     
-    </div>
-
-    <!-- Desktop Navigation -->
-     <div class="hidden md:flex w-4xl items-center mx-2 justify-around border-2 border-black rounded-full px-12 py-2 space-x-6" style="font-family: poppins;"  >
-      <a href="#" class="nav-link  uppercase  text-[#21B803]" data-link="home">Home</a>
-      <a href="#" class="nav-link  uppercase  hover:text-[#21B803]" data-link="leadership">Leadership</a>
-      <a href="#" class="nav-link  uppercase   hover:text-[#21B803]" data-link="yoam">Y.O.A.M.</a>
-      <a href="#" class="nav-link  uppercase  hover:text-[#21B803]" data-link="where">Where We Are</a>
-      <a href="#" class="nav-link  uppercase  hover:text-[#21B803]" data-link="ondemand">On Demand</a>
-      <a href="#" class="nav-link  uppercase  hover:text-[#21B803]" data-link="give">Give</a>
-    </div>
-
-    <!-- Social Icons -->
- <div class="hidden md:flex items-center space-x-2">
-  <a href="#" class="text-black">
-    <img src="fb-icon.png" alt="facebook" class="h-5 sm:h-6 md:h-8 lg:h-10 w-auto cursor-pointer">
-  </a>
-  <a href="#" class="text-black">
-    <img src="insta-icon.png" alt="instagram" class="h-5 sm:h-6 md:h-8 lg:h-10 w-auto cursor-pointer">
-  </a>
-</div>
-
-    <!-- Hamburger (Mobile) -->
-    <div class="md:hidden">
-      <button onclick="toggleMenu()">
-        <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-    </div>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobileMenu" class="md:hidden hidden px-4 py-4 border-t">
-    <nav class="flex flex-col space-y-4 text-sm  uppercase">
-      <a href="#" class="hover:text-[#21B803]">Home</a>
-      <a href="#" class="hover:text-[#21B803]">Leadership</a>
-      <a href="#" class="hover:text-[#21B803]">Y.O.A.M.</a>
-      <a href="#" class="hover:text-[#21B803]">Where We Are</a>
-      <a href="#" class="hover:text-[#21B803]">On Demand</a>
-      <a href="#" class="hover:text-[#21B803]">Give</a>
-      <div class="flex space-x-4 pt-4 border-t mt-2">
-        <a href="#"><img src="fb-icon.png" alt="facebook" class="h-10 w-auto"></a>
-        <a href="#"><img src="insta-icon.png" alt="instagram" class="h-10 w-auto"></a>
+  <nav class="bg-white shadow-lg px-3 py-3 md:px-0">
+    <div class="max-w-full mx-auto py-5 sm:px-6 lg:px-12 flex items-center justify-between h-20">
+      
+      <!-- Logo Section -->
+      <div class="flex items-center space-x-1">
+        <img src="logo.png" alt="Logo" class="h-15 w-auto">
       </div>
-    </nav>
-  </div>
-</nav>
+  
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex w-4xl items-center mx-2 justify-around border-2 border-black rounded-full px-12 py-2 space-x-6" style="font-family: poppins;">
+        <a href="#" class="nav-link uppercase text-[#21B803]" data-link="home">Home</a>
+        <a href="#" class="nav-link uppercase hover:text-[#21B803]" data-link="leadership">Leadership</a>
+        <a href="#" class="nav-link uppercase hover:text-[#21B803]" data-link="yoam">Y.O.A.M.</a>
+        <a href="#" class="nav-link uppercase hover:text-[#21B803]" data-link="where">Where We Are</a>
+        <a href="#" class="nav-link uppercase hover:text-[#21B803]" data-link="ondemand">On Demand</a>
+        <a href="#" class="nav-link uppercase hover:text-[#21B803]" data-link="give">Give</a>
+      </div>
+  
+      <!-- Social Icons -->
+      <div class="hidden md:flex items-center space-x-2">
+        <a href="#"><img src="fb-icon.png" alt="facebook" class="h-5 sm:h-6 md:h-8 lg:h-10 w-auto cursor-pointer"></a>
+        <a href="#"><img src="insta-icon.png" alt="instagram" class="h-5 sm:h-6 md:h-8 lg:h-10 w-auto cursor-pointer"></a>
+      </div>
+  
+      <!-- Hamburger Menu -->
+      <div class="md:hidden">
+        <button onclick="toggleMenu()" id="menuToggleBtn">
+          <!-- Default icon -->
+          <svg id="menuIcon" class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="menuIconPath" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden hidden px-4 py-4 border-t">
+      <nav class="flex flex-col space-y-4 text-sm uppercase">
+        <a href="#" class="mobile-link hover:text-[#21B803]">Home</a>
+        <a href="#" class="mobile-link hover:text-[#21B803]">Leadership</a>
+        <a href="#" class="mobile-link hover:text-[#21B803]">Y.O.A.M.</a>
+        <a href="#" class="mobile-link hover:text-[#21B803]">Where We Are</a>
+        <a href="#" class="mobile-link hover:text-[#21B803]">On Demand</a>
+        <a href="#" class="mobile-link hover:text-[#21B803]">Give</a>
+        <div class="flex space-x-4 pt-4 border-t mt-2">
+          <a href="#"><img src="fb-icon.png" alt="facebook" class="h-10 w-auto"></a>
+          <a href="#"><img src="insta-icon.png" alt="instagram" class="h-10 w-auto"></a>
+        </div>
+      </nav>
+    </div>
+  </nav>
 
 
     <!-- Hero Section -->
@@ -118,31 +114,33 @@ Serving the Nations.
 </main>
 
 <!----Live on youtube----->
-
-    
-   <section class="flex my-5 md:my-20 justify-center items-center">
-  <div class="relative rounded-3xl w-full md:px-12 overflow-hidden p-1">
+   
+<section class="flex my-5 md:my-20 justify-center items-center">
+  <a href="#" class="group relative rounded-3xl w-full md:px-12 overflow-hidden p-1 transition-transform duration-300 transform hover:scale-[1.02]">
     
     <!-- Background Image Container -->
     <div class="relative h-[200px] sm:h-[250px] md:h-[300px] lg:h-[250px] overflow-hidden rounded-3xl">
       
       <!-- Background Image -->
       <div
-        class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        class="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105"
         style="background-image: url('cwm yt.png');">
       </div>
 
-      <!-- Black transparent overlay -->
-      <div class="rounded-3xl absolute inset-0 bg-black/70"></div>
+      <!-- Black transparent overlay (darkens more on hover) -->
+      <div class="rounded-3xl absolute inset-0 bg-black/70 group-hover:bg-black/80 transition-colors duration-300"></div>
 
       <!-- Main content -->
-      <div class="relative z-10 flex flex-col sm:flex-row gap-4 sm:gap-10 items-center justify-center h-full">
-        <h2 class="text-3xl md:text-6xl font-bold text-white text-center heading">Click to Watch Live on</h2>
-        <img src="YouTube_logo_(2017).png" class="h-10 md:h-14" alt="YouTube">
+      <div class="relative z-10 flex flex-col sm:flex-row gap-4 sm:gap-10 items-center justify-center h-full transition-transform duration-300 group-hover:scale-110">
+        <h2 class="text-3xl md:text-6xl font-bold text-white text-center heading transition-all duration-300 group-hover:scale-105">
+          Click to Watch Live on
+        </h2>
+        <img src="YouTube_logo_(2017).png" class="h-10 md:h-14  " alt="YouTube">
       </div>
     </div>
-  </div>
+  </a>
 </section>
+
 
 
 
@@ -180,79 +178,80 @@ Serving the Nations.
 
     <!-- youth on a mission -->
 
-      <section class="flex my-5 md:my-20 justify-center items-center">
-  <div class="relative rounded-3xl w-full md:px-12 overflow-hidden p-1">
+    <section class="flex my-5 md:my-20 justify-center items-center">
+      <div class="relative rounded-3xl w-full md:px-12 overflow-hidden p-1">
+        
+        <!-- Background Image Container -->
+        <div class="relative h-[200px] sm:h-[250px] md:h-[300px] lg:h-[250px] overflow-hidden rounded-3xl">
+          
+          <!-- Background Image with grayscale -->
+          <div
+            class="absolute inset-0 bg-cover bg-center bg-no-repeat filter brightness-75"
+            style="background-image: url('yoam-img.png');">
+          </div>
     
-    <!-- Background Image Container -->
-    <div class="relative h-[200px] sm:h-[250px] md:h-[300px] lg:h-[250px] overflow-hidden rounded-3xl">
-      
-      <!-- Background Image -->
-      <div
-        class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style="background-image: url('yoam-img.png');">
-      </div>
-
-      <!-- Black transparent overlay -->
-      <div class="rounded-3xl absolute inset-0 bg-black/80"></div>
-
-      <!-- Main content -->
-      <div class="relative z-10 flex flex-col sm:flex-row gap-4 sm:gap-10 items-center justify-center h-full">
-        <img src="yoam.png" class="h-20  md:h-40" alt="yoam">
-         <h2 class="text-3xl md:text-5xl text-white  font-semibold text-center heading" >Youth on a mission: upcoming trips</h2>
-      </div>
-    </div>
-  </div>
-</section>
-
+          <!-- Black transparent overlay -->
+          <div class="rounded-3xl absolute inset-0 bg-black/80"></div>
     
-<!-- video section -->
-<section class="py-20 bg-white">
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-12" data-aos="zoom-in" data-aos-duration="2000">
-      <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-        A Word From The President
-      </h2>
-    </div>
-
-    <!-- Video Thumbnail -->
-    <div onclick="playVideo()" class="relative group cursor-pointer" data-aos="zoom-in" data-aos-duration="2000">
-      <div class="relative rounded-2xl overflow-hidden shadow-xl aspect-video bg-gradient-to-b from-[#0d1117] to-black">
-
-        <!-- Centered Play Button -->
-        <div class="absolute inset-0 flex items-center justify-center z-10">
-          <div class="relative w-26 h-26  border-white border-4 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-            <svg class="w-12 h-12 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M8 5v14l11-7z" />
-            </svg>
+          <!-- Main content -->
+          <div class="relative z-10 flex flex-col sm:flex-row gap-4 sm:gap-10 items-center justify-center h-full">
+            <img src="yoam.png" class="h-20 md:h-40" alt="yoam">
+            <h2 class="text-3xl md:text-5xl text-white font-semibold text-center heading">
+              Youth on a mission: upcoming trips
+            </h2>
           </div>
         </div>
-      
+      </div>
+    </section>
+    
+
+<!--Multi Images--->
+
+<section class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 px-12 md:px-16 py-12 bg-gray-50">
+
+  <!-- Left: Stacked image cards -->
+  <div class="flex flex-col space-y-4 w-full md:w-1/2">
+
+    <!-- Image Card 1 -->
+    <div class="relative h-36 md:h-40 rounded-3xl overflow-hidden">
+      <div class="absolute inset-0 bg-cover bg-center grayscale brightness-75" style="background-image: url('https://via.placeholder.com/600x400');"></div>
+      <div class="absolute inset-0 bg-black opacity-40 mix-blend-multiply"></div>
+      <div class="relative z-10 flex items-center justify-center h-full">
+        <h2 class="text-white text-xl md:text-2xl font-bold">Pray</h2>
       </div>
     </div>
+
+    <!-- Image Card 2 -->
+    <div class="relative h-36 md:h-40 rounded-3xl overflow-hidden">
+      <div class="absolute inset-0 bg-cover bg-center grayscale brightness-75" style="background-image: url('https://via.placeholder.com/600x400');"></div>
+      <div class="absolute inset-0 bg-black opacity-40 mix-blend-multiply"></div>
+      <div class="relative z-10 flex items-center justify-center h-full">
+        <h2 class="text-white text-xl md:text-2xl font-bold">Care</h2>
+      </div>
+    </div>
+
+    <!-- Image Card 3 -->
+    <div class="relative h-36 md:h-40 rounded-3xl overflow-hidden">
+      <div class="absolute inset-0 bg-cover bg-center grayscale brightness-75" style="background-image: url('https://via.placeholder.com/600x400');"></div>
+      <div class="absolute inset-0 bg-black opacity-40 mix-blend-multiply"></div>
+      <div class="relative z-10 flex items-center justify-center h-full">
+        <h2 class="text-white text-xl md:text-2xl font-bold">Go</h2>
+      </div>
+    </div>
+
   </div>
+
+  <!-- Right: Text Content -->
+  <div class="w-full md:w-1/2 text-center md:text-left space-y-4">
+    <h3 class="text-2xl md:text-3xl font-bold">Ways to Support Global Missions</h3>
+    <p class="text-gray-700 text-sm md:text-base leading-relaxed">
+      Giving to missions is more than a financial transaction—it's an act of global discipleship, a step toward healing hearts and crossing borders.
+      We channel each gift with care, so that love can change lives in every nation we reach.
+    </p>
+  </div>
+
 </section>
 
-<div id="videoModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black bg-opacity-90 backdrop-blur-sm">
-  <div class="relative w-full max-w-4xl mx-4">
-    <!-- Close Button -->
-    <button onclick="closeVideo()" class="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors">
-      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-      </svg>
-    </button>
-
-    <!-- Video -->
-    <div class="relative overflow-hidden rounded-lg bg-black aspect-video shadow-2xl">
-      <iframe id="videoFrame"
-              class="absolute top-0 left-0 w-full h-full"
-              src=""
-              title="A Word From The President"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
-      </iframe>
-    </div>
-  </div>
-</div>
 
     <!-- COGIC World Missions Giving Section -->
     <section class="w-full py-16 bg-[#6bbf59] giving-gradient-bg">
