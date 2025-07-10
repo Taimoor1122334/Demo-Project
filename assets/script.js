@@ -103,3 +103,32 @@ window.onload = () => {
         setActive(defaultBtn);
     }
 };
+
+
+    // Navbar Fixed on Scroll
+  window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('mainNavbar');
+    const scrollPercentage = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    
+    if (scrollPercentage > 10) {
+      navbar.classList.add('fixed', 'top-0', 'left-0', 'right-0', 'animate__animated', 'animate__fadeInDown');
+      navbar.classList.remove('relative');
+    } else {
+      navbar.classList.remove('fixed', 'top-0', 'left-0', 'right-0', 'animate__animated', 'animate__fadeInDown');
+      navbar.classList.add('relative');
+    }
+  });
+
+
+
+  //header-video
+   function toggleVideo() {
+    const video = document.getElementById("headerVideo");
+
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  }
+  

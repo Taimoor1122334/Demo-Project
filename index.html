@@ -13,7 +13,7 @@
 </head>
 <body style="background-color: #F2F2F2; font-family: poppins;">
 
-  <nav class="bg-white shadow-lg px-3 py-3 md:px-0">
+  <nav id="mainNavbar" class="bg-white z-20 transi transition-all  duration-1000 ease-in-out shadow-lg px-3 py-3 md:px-0">
     <div class="max-w-full mx-auto py-5 sm:px-6 lg:px-12 flex items-center justify-between h-20">
       
       <!-- Logo Section -->
@@ -74,21 +74,24 @@
     <!-- Background Image Container -->
     <div class="relative h-[400px] sm:h-[450px] md:h-[550px] lg:h-[650px] overflow-hidden rounded-3xl">
       
-      <!-- Background Image -->
+      <!-- Background video -->
       <div
-        class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style="background-image: url('hero-image.png');">'
+        class="absolute inset-0 bg-cover bg-center bg-no-repeat">
 
+        <video id="headerVideo" class="absolute inset-0 w-full h-full object-cover" muted loop>
+  <source src="header-video.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
       <!-- Black transparent overlay -->
       <div class="rounded-3xl absolute inset-0 bg-black/50"></div>
 
       <!-- Main content -->
       <div class="relative z-10 flex items-center justify-center h-full px-4 sm:px-6 lg:px-8">
-        <div class="text-center text-white w-3xl">
+        <div class="text-center text-white w-3xl" >
           
 
           <!-- Headline -->
-          <h1 data-aos="zoom-in" data-aos-duration="1500"
+          <h1 
               class=" heading  text-3xl sm:text-4xl md:text-6xl font-bold leading-tight mb-4">
            <span >
              Making Disciples.<br>
@@ -100,9 +103,10 @@ Serving the Nations.
 
           
           <div 
+          
                class=" mt-2 text-2xl capitalize " style="font-family: poppins;"  >
             <p>Missions is not a place to shine. It is a place to serve!</p>
-            <button  class="capitalize cursor-pointer text-lg  bg-[#21B803] rounded-full px-7 py-1 hover:bg-green-600 transition duration-300 mt-4">
+            <button onclick="toggleVideo()" class="capitalize cursor-pointer text-lg  bg-[#21B803] rounded-full px-7 py-1 hover:bg-green-600 transition duration-300 mt-4">
               learn more
             </button>
           </div>
@@ -194,7 +198,7 @@ Serving the Nations.
           <div class="rounded-3xl absolute inset-0 bg-black/40"></div>
     
           <!-- Main content -->
-          <div class="relative z-10 flex flex-col sm:flex-row gap-4 sm:gap-10 items-center justify-center h-full">
+          <div data-aos="zoom-in" data-aos-duration="1000" class="relative z-10 flex flex-col sm:flex-row gap-4 sm:gap-10 items-center justify-center h-full">
             <img src="yoam.png" class="h-20 md:h-40" alt="yoam">
             <h2 class="text-3xl md:text-5xl text-white font-semibold text-center heading">
               Youth on a mission: upcoming trips
@@ -209,7 +213,7 @@ Serving the Nations.
       <section class="flex flex-col md:flex-row items-center justify-between px-6 py-10 max-w-7xl mx-auto overflow-hidden relative">
     
     <!-- Left Text Side -->
-    <div class="w-full  md:w-[40%] pr-6 py-2">
+    <div data-aos="fade-right" data-aos-duration="1500" class="w-full  md:w-[40%] pr-6 py-2">
       
       <h2 class="text-3xl md:text-5xl font-bold mb-4 heading" id="title">ANGOLA</h2>
       <p class=" mb-6 md:text-2xl" id="desc">
@@ -220,7 +224,7 @@ Serving the Nations.
     </div>
 
     <!-- Right Image Carousel -->
-    <div class="w-full md:w-[60%] overflow-hidden">
+    <div class="w-full md:w-[60%] overflow-hidden" data-aos="fade-in" data-aos-duration="1500">
       <div class="flex gap-4 transform slide" id="carousel">
         <!-- Slide 1 -->
         <div class="min-w-[48%] relative rounded-xl  overflow-hidden">
@@ -241,15 +245,14 @@ Serving the Nations.
        <!-- Carousel Controls -->
 <div class="gap- my-4">
   <!-- Left Arrow -->
-  <button onclick="slideLeft(); setActive(this);" class="arrow-btn cursor-pointer">
-    <svg class="w-15 h-10 icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <button onclick="slideLeft(); setActive(this);" class="arrow-btn cursor-pointer ">
+    <svg class="w-15 h-10 icon-svg " viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <path 
         d="M8.12 12l6.83-6.83a1 1 0 0 0-1.41-1.41L5.3 12l8.24 8.24a1 1 0 0 0 1.41-1.41L8.12 12z" 
         fill="none" 
         stroke="white" 
         stroke-width="3"
-        stroke-linecap="round" 
-        stroke-linejoin="round"
+    
       />
     </svg>
   </button>
@@ -262,8 +265,7 @@ Serving the Nations.
         fill="none" 
         stroke="white" 
         stroke-width="3"
-        stroke-linecap="round" 
-        stroke-linejoin="round"
+        
       />
     </svg>
   </button>
@@ -289,8 +291,8 @@ Serving the Nations.
   <div class="flex flex-col space-y-4 w-full md:w-[70%]">
 
     <!-- Image Card 1 -->
-    <div class="relative h-46 md:h-60  rounded-3xl overflow-hidden">
-      <div class="absolute inset-0 bg-cover bg-center " style="background-image: url(prayer\ tab.png);"></div>
+    <div class="group relative h-46 md:h-60  rounded-3xl overflow-hidden" data-aos="fade-right" data-aos-duration="1000">
+      <div class="absolute inset-0 bg-cover bg-center  transition-transform duration-500 group-hover:scale-105 " style="background-image: url(prayer\ tab.png);"></div>
       <div class="rounded-3xl absolute inset-0 bg-black/40"></div>
       <div class="relative z-10 flex items-center ml-10 h-full">
         <h2 class="text-white text-2xl md:text-4xl capitalize font-bold heading">PRAY</h2>
@@ -298,8 +300,8 @@ Serving the Nations.
     </div>
 
     <!-- Image Card 2 -->
-    <div class="relative h-46 md:h-60  rounded-3xl overflow-hidden">
-      <div class="absolute inset-0 bg-cover bg-center " style="background-image: url(give\ tab.png);"></div>
+    <div class="group relative h-46 md:h-60  rounded-3xl overflow-hidden" data-aos="fade-right" data-aos-duration="1200">
+      <div class="absolute inset-0 bg-cover bg-center  transition-transform duration-500 group-hover:scale-105 " style="background-image: url(give\ tab.png);"></div>
       <div class="rounded-3xl absolute inset-0 bg-black/40"></div>
       <div class="relative z-10 flex items-center ml-10 h-full">
         <h2 class="text-white text-2xl md:text-4xl capitalize font-bold heading">GIVE</h2>
@@ -308,8 +310,8 @@ Serving the Nations.
 
 
     <!-- Image Card 3 -->
-   <div class="relative h-46 md:h-60  rounded-3xl overflow-hidden">
-      <div class="absolute inset-0 bg-cover bg-center " style="background-image: url(go\ tab.png);"></div>
+   <div class="group relative h-46 md:h-60  rounded-3xl overflow-hidden " data-aos="fade-right" data-aos-duration="1300">
+      <div class="absolute inset-0 bg-cover bg-center  transition-transform duration-500 group-hover:scale-105 " style="background-image: url(go\ tab.png);"></div>
       <div class="rounded-3xl absolute inset-0 bg-black/40"></div>
       <div class="relative z-10 flex items-center ml-10 h-full">
         <h2 class="text-white text-2xl md:text-4xl capitalize font-bold heading">GO</h2>
@@ -318,7 +320,7 @@ Serving the Nations.
 </div>
 
   <!-- Right: Text Content -->
-  <div class="w-full md:w-1/2 px-2 md:text-left space-y-4">
+  <div class="w-full md:w-1/2 px-2 md:text-left space-y-4" data-aos="fade-left" data-aos-duration="1500">
     <h3 class="text-2xl md:text-5xl font-bold heading " style="line-height: 1.2;">Ways to<br>
 Support cogic<br>
 World missions</h3>
@@ -344,18 +346,18 @@ World missions</h3>
       <p class="text-center text-lg md:text-base  max-w-xl mb-8">
        Our COGIC World Missions newsletter provides updates on outreach mission opportunities. Submit your name and email address to receive our monthly newsletter. 
       </p>
-      <form class="w-full max-w-2xl flex flex-col items-center">
+      <form class="w-full max-w-4xl flex flex-col justify-center items-center">
         <div class="flex flex-col md:flex-row w-full gap-2 mb-6">
-          <input type="text" placeholder="First Name"  class=" bg-white flex-1 border placeholder-black border-black px-8 py-2 rounded-none focus:outline-none" />
-          <input type="text" placeholder="Last Name" class="bg-white flex-1 border placeholder-black border-black px-8 py-2 rounded-none focus:outline-none" />
-          <input type="email" placeholder="Email Address" class="bg-white flex-1 border placeholder-black border-black px-8 py-2 rounded-none focus:outline-none" />
+          <input type="text" placeholder="First Name"  class=" bg-white flex-1 border placeholder-black border-black px-7 py-3 rounded-none focus:outline-none" />
+          <input type="text" placeholder="Last Name" class="bg-white flex-1 border placeholder-black border-black px-7 py-3 rounded-none focus:outline-none" />
+          <input type="email" placeholder="Email Address" class="bg-white flex-1 border placeholder-black border-black px-7 py-3 rounded-none focus:outline-none" />
         </div>
         <button type="submit" class="bg-[#21B803] cursor-pointer text-white px-7 py-3 rounded-full font-semibold transition hover:bg-green-600">Subscribe Now</button>
       </form>
     </section>
 
     <!-- Footer -->
-<footer class="bg-[#f7f7f7] py-12 px-6">
+<footer class="bg-[#f7f7f7] py-12 md:px-12">
   <div class="max-w-7xl px-[5%] mx-auto grid grid-cols-1 md:grid-cols-5 gap-10">
     
     <!-- Logo & Description -->
@@ -402,13 +404,13 @@ World missions</h3>
         938 Mason Street<br>
         Memphis, TN 38126<br><br>
         Tel: (901) 947-9316<br>
-        yhuaq@cogic.org
+        Cogicworldmissions@cogic.org
       </p>
     </div>
   </div>
 
   <!-- Copyright -->
-  <div class="text-center pl-[30%] text-xs  ">
+  <div class="text-end pl-[30%] text-xs md:mr-20  ">
     Copyright © 2024 TechChurch.io. All Rights Reserved.
   </div>
 </footer>
