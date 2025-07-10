@@ -121,14 +121,5 @@ window.onload = () => {
 
 
 
-  //header-video
-   function toggleVideo() {
-    const video = document.getElementById("headerVideo");
 
-    if (video.paused) {
-      video.play();
-    } else {
-      video.pause();
-    }
-  }
   
