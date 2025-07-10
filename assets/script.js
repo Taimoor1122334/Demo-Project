@@ -1,21 +1,4 @@
   AOS.init();
-
-
-    function playVideo() {
-    const modal = document.getElementById('videoModal');
-    const iframe = document.getElementById('videoFrame');
-    modal.classList.remove('hidden');
-    modal.classList.add('flex');
-    iframe.src = "https://www.youtube.com/embed/s2skans2dP4?si=YXzO_RBgpN917yal";
-  }
-
-  function closeVideo() {
-    const modal = document.getElementById('videoModal');
-    const iframe = document.getElementById('videoFrame');
-    modal.classList.add('hidden');
-    modal.classList.remove('flex');
-    iframe.src = "";
-  }
  
    const links = document.querySelectorAll('.nav-link');
 
@@ -54,4 +37,69 @@
       document.getElementById("menuIconPath").setAttribute("d", "M4 6h16M4 12h16M4 18h16");
     });
   });
+
+  // Carousel functionality
+
+     const carousel = document.getElementById("carousel");
+    const progress = document.getElementById("progress");
+    const title = document.getElementById("title");
+    const desc = document.getElementById("desc");
+
+    const slides = [
+      {
+        title: "ANGOLA",
+        desc: "Prepare for a life-changing mission as we journey through the heart of Angola! Our dedicated team will be serving in vibrant communities like Luanda, Huambo, Benguela, Lubango, and Malanje, sharing love, hope, and the message of faith.",
+      },
+      {
+        title: "PHILIPPINES",
+        desc: "Join us in the beautiful Philippines, working alongside local communities to bring hope, joy, and practical help through faith-driven outreach programs in rural and urban areas.",
+      },
+      {
+        title: "TANZANIA",
+        desc: "Experience the heart of Africa in Tanzania. Our mission will focus on education, medical aid, and spiritual growth in cities and villages across the region.",
+      },
+    ];
+
+    let currentIndex = 0;
+
+    function updateContent() {
+      title.textContent = slides[currentIndex].title;
+      desc.textContent = slides[currentIndex].desc;
+      carousel.style.transform = `translateX(-${currentIndex * 50}%)`;
+      progress.style.width = `${((currentIndex + 1) / slides.length) * 100}%`;
+    }
+
+    function slideRight() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateContent();
+    }
+
+    function slideLeft() {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateContent();
+    }
+
+    updateContent();
         
+   function setActive(clickedBtn) {
+    const buttons = document.querySelectorAll(".arrow-btn");
+    
+    // Reset all buttons
+    buttons.forEach(btn => {
+        const svg = btn.querySelector("svg path");
+        svg.setAttribute("stroke", "white");
+        svg.setAttribute("fill", "none");
+    });
+    
+    // Set active state for clicked button
+    const activeSvg = clickedBtn.querySelector("svg path");
+    activeSvg.setAttribute("stroke", "gray");
+    activeSvg.setAttribute("fill", "gray");
+}
+
+window.onload = () => {
+    const defaultBtn = document.querySelector(".arrow-btn.rotate-180"); // Target right arrow
+    if (defaultBtn) {
+        setActive(defaultBtn);
+    }
+};
