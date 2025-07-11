@@ -4,14 +4,9 @@
 @import "tailwindcss";
      
      
-    @font-face {
-  font-family: 'AvantGrade';
-  src: url('./assets/fonts/AvantGrade.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
+
 .heading{
-    font-family: 'AvantGrade', sans-serif;
+    font-family: itc-avant-garde-gothic-pro, sans-serif;
 }
 
     .slide {
