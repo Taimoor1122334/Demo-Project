@@ -8,8 +8,8 @@
         l.classList.remove('text-green-600');
         l.classList.add('text-black');
       });
-      this.classList.remove('text-gray-700');
-      this.classList.add('text-black');
+      this.classList.remove('text-black');
+      this.classList.add('text-green-600');
     });
   });
 
