@@ -4,7 +4,11 @@
 @import "tailwindcss";
      
      
-
+body{
+ background-color: #F2F2F2;
+  font-family: poppins; 
+  overflow-x: hidden;
+}
 .heading{
     font-family: itc-avant-garde-gothic-pro, sans-serif;
 }

@@ -1,18 +1,21 @@
   AOS.init();
  
-   const links = document.querySelectorAll('.nav-link');
+  document.addEventListener('DOMContentLoaded', function () {
+  const currentPath = window.location.pathname.split('/').pop(); // e.g., 'about.html'
+  const links = document.querySelectorAll('.nav-link');
 
   links.forEach(link => {
-    link.addEventListener('click', function () {
-      links.forEach(l => {
-        l.classList.remove('text-green-600');
-        l.classList.add('text-black');
-      });
-      this.classList.remove('text-black');
-      this.classList.add('text-green-600');
-    });
+    const href = link.getAttribute('href');
+    
+    // Highlight active link based on URL
+    if (href === currentPath || (href === 'index.html' && currentPath === '')) {
+      link.classList.add('text-[#21B803]');
+    } else {
+      link.classList.remove('text-[#21B803]');
+      link.classList.add('text-black');
+    }
   });
-
+});
 
   function toggleMenu() {
     const mobileMenu = document.getElementById("mobileMenu");
@@ -44,7 +47,7 @@
     const progress = document.getElementById("progress");
     const title = document.getElementById("title");
     const desc = document.getElementById("desc");
-
+ if (carousel && title && desc && progress) {
     const slides = [
       {
         title: "ANGOLA",
@@ -68,6 +71,9 @@
       carousel.style.transform = `translateX(-${currentIndex * 50}%)`;
       progress.style.width = `${((currentIndex + 1) / slides.length) * 100}%`;
     }
+   
+  
+
 
     function slideRight() {
       currentIndex = (currentIndex + 1) % slides.length;
@@ -84,7 +90,6 @@
    function setActive(clickedBtn) {
     const buttons = document.querySelectorAll(".arrow-btn");
     
-    // Reset all buttons
     buttons.forEach(btn => {
         const svg = btn.querySelector("svg path");
         svg.setAttribute("stroke", "white");
@@ -98,12 +103,12 @@
 }
 
 window.onload = () => {
-    const defaultBtn = document.querySelector(".arrow-btn.rotate-180"); // Target right arrow
+    const defaultBtn = document.querySelector(".arrow-btn.rotate-180"); 
     if (defaultBtn) {
         setActive(defaultBtn);
     }
 };
-
+ }
 
     // Navbar Fixed on Scroll
   window.addEventListener('scroll', function() {
@@ -119,44 +124,3 @@ window.onload = () => {
     }
   });
 
-const baseWidth = 1366;
-
-  function scaleElements() {
-    const scaleFactor = window.innerWidth / baseWidth;
-
-    // --- Scale Text Elements ---
-    document.querySelectorAll('.scale-text').forEach(el => {
-      const isHeading = /^H[1-6]$/.test(el.tagName);
-      const mobile = window.innerWidth <= 640;
-
-      if (!el.dataset.originalFont) {
-        if (isHeading) {
-          el.dataset.originalFont = mobile ? 30 : 40;
-        } else {
-          const computedFont = window.getComputedStyle(el).fontSize;
-          el.dataset.originalFont = parseFloat(computedFont);
-        }
-      }
-
-      const originalFont = parseFloat(el.dataset.originalFont);
-      const newFontSize = Math.max(20, Math.min(originalFont * scaleFactor, originalFont * 1.5));
-      el.style.fontSize = `${newFontSize}px`;
-    });
-
-    // --- Scale Image Elements ---
-    document.querySelectorAll('.scale-img').forEach(img => {
-      if (!img.dataset.originalWidth) {
-        img.dataset.originalWidth = img.offsetWidth;
-        img.dataset.originalHeight = img.offsetHeight;
-      }
-
-      const newWidth = Math.min(img.dataset.originalWidth * scaleFactor, img.dataset.originalWidth * 1.5);
-      const newHeight = Math.min(img.dataset.originalHeight * scaleFactor, img.dataset.originalHeight * 1.5);
-
-      img.style.width = `${newWidth}px`;
-      img.style.height = `${newHeight}px`;
-    });
-  }
-
-  window.addEventListener('load', scaleElements);
-  window.addEventListener('resize', scaleElements);

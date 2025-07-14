@@ -12,35 +12,34 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://use.typekit.net/ckp8nwm.css">
 </head>
-<body style="background-color: #F2F2F2; font-family: poppins; overflow-x: hidden;">
-
-  <nav id="mainNavbar" class="bg-white z-20 transition-all  duration-1000 ease-in-out shadow-lg px-3 py-3 md:px-0">
+<body>
+<nav id="mainNavbar" class="bg-white z-20 transition-all  duration-1000 ease-in-out shadow-lg px-3 py-5 md:px-0">
     <div class="max-w-full mx-auto py-5 sm:px-6 lg:px-12 flex items-center justify-between h-20">
       
       <!-- Logo Section -->
-      <div class="flex items-center space-x-1 h-18 w-auto">
+      <div class="flex items-center space-x-1 md:h-20 w-auto 2xl:h-[95px] 2xl:w-[238px]">
         <img src="assets/images/home/logo.png" alt="Logo" class="w-full h-full">
       </div>
   
       <!-- Desktop Navigation -->
-      <div class="hidden md:flex w-4xl text-lg items-center mx-2 justify-around border-2 border-black rounded-full px-12 py-2 space-x-6" style="font-family: poppins;">
-        <a href="#" class="nav-link uppercase text-[#21B803]" data-link="home">Home</a>
-       <a href="#" class="nav-link uppercase hover:text-[#21B803]" data-link="about">About</a>
-        <a href="#" class="nav-link uppercase hover:text-[#21B803]" data-link="leadership">Leadership</a>
-        <a href="#" class="nav-link uppercase hover:text-[#21B803]" data-link="yoam">Y.O.A.M.</a>
-        <a href="#" class="nav-link uppercase hover:text-[#21B803]" data-link="where">Where We Are</a>
-        <a href="#" class="nav-link uppercase hover:text-[#21B803]" data-link="ondemand">On Demand</a>
-        <a href="#" class="nav-link uppercase hover:text-[#21B803]" data-link="give">Give</a>
+     <div class="hidden lg:flex  text-lg items-center mx-2 justify-around border-2 border-black rounded-full px-15 py-2 space-x-10 2xl:space-x-15" >
+        <a href="index.html" class="nav-link uppercase md:text-base 2xl:text-[1.25rem] hover:text-[#21B803] " data-link="home">Home</a>
+       <a href="about.html" class="nav-link uppercase md:text-base 2xl:text-[1.25rem]  hover:text-[#21B803]" data-link="about">About</a>
+        <a href=" leadership.html" class="nav-link md:text-base 2xl:text-[1.25rem] uppercase hover:text-[#21B803]" data-link="leadership">Leadership</a>
+        <a href="yoam.html" class="nav-link uppercase md:text-base 2xl:text-[1.25rem] hover:text-[#21B803]" data-link="yoam">Y.O.A.M.</a>
+        <a href="where-we-are.html" class="nav-link md:text-base 2xl:text-[1.25rem] uppercase hover:text-[#21B803]" data-link="where">Where We Are</a>
+        <a href="ondemand.html" class="nav-link md:text-base 2xl:text-[1.25rem] uppercase hover:text-[#21B803]" data-link="ondemand">On Demand</a>
+        <a href="give.html" class="nav-link md:text-base 2xl:text-[1.25rem] uppercase hover:text-[#21B803]" data-link="give">Give</a>
       </div>
   
       <!-- Social Icons -->
-      <div class="hidden md:flex items-center space-x-2 h-10 w-10">
+      <div class="hidden lg:flex items-center space-x-2 h-10 w-10 2xl:h-[58px] 2xl:w-[58px]">
         <a href="https://www.facebook.com/COGICWorldMissions/" target="_blank"><img src="assets/images/home/fb-icon.png" alt="facebook" class="h-full w-full cursor-pointer"></a>
       <!--  <a href="#"><img src="assets/images/home/insta-icon.png" alt="instagram" class="h-5 sm:h-6 md:h-8 lg:h-10 w-auto cursor-pointer"></a> -->
       </div>
   
       <!-- Hamburger Menu -->
-      <div class="md:hidden">
+      <div class="lg:hidden">
         <button onclick="toggleMenu()" id="menuToggleBtn">
           <!-- Default icon -->
           <svg id="menuIcon" class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -52,10 +51,10 @@
     </div>
   
     <!-- Mobile Menu -->
-    <div id="mobileMenu" class="md:hidden hidden px-4 py-4 border-t">
+    <div id="mobileMenu" class="lg:hidden hidden px-4 py-4 border-t">
       <nav class="flex flex-col space-y-4 text-sm uppercase">
-        <a href="#" class="mobile-link hover:text-[#21B803]">Home</a>
-        <a href="#" class="mobile-link hover:text-[#21B803]">About</a>
+        <a href="index.html" class="mobile-link hover:text-[#21B803]">Home</a>
+        <a href="about.html" class="mobile-link hover:text-[#21B803]">About</a>
         <a href="#" class="mobile-link hover:text-[#21B803]">Leadership</a>
         <a href="#" class="mobile-link hover:text-[#21B803]">Y.O.A.M.</a>
         <a href="#" class="mobile-link hover:text-[#21B803]">Where We Are</a>
@@ -69,13 +68,12 @@
     </div>
   </nav>
 
-
     <!-- Hero Section -->
    <main class="flex justify-center items-center">
   <div class="relative rounded-3xl w-full md:px-12 overflow-hidden p-1">
     
     <!-- Background Image Container -->
-    <div class="relative h-[400px] sm:h-[450px] md:h-[550px] lg:h-[650px] overflow-hidden rounded-3xl">
+    <div class="relative h-[400px] sm:h-[450px] md:h-[550px] lg:h-[650px] 2xl:h-[700px] overflow-hidden rounded-3xl">
       
       <!-- Background video -->
       <div
@@ -90,17 +88,17 @@
 
       <!-- Main content -->
       <div class="relative z-10 flex items-center justify-center h-full px-4 sm:px-6 lg:px-8">
-        <div class="text-center text-white w-3xl" data-aos="fade-up" data-aos-duration="1000">
+        <div class="text-center text-white " data-aos="fade-up" data-aos-duration="1000">
           
 
           <!-- Headline -->
           <h1 
-              class=" heading  text-3xl sm:text-4xl md:text-6xl uppercase font-bold leading-tight mb-4">
+              class=" heading  text-3xl  md:text-4xl xl:text-6xl 2xl:text-7xl uppercase font-bold leading-tight mb-4">
            <span >
              Making Disciples.<br>
 Planting Churches.<br>
 Serving the Nations.
-           </span>
+           </span><br>
            <img src="assets/images/home/brush mark.png" class="float-end" >
           </h1><br>
 
@@ -126,7 +124,7 @@ Serving the Nations.
   <a href="https://www.youtube.com/@officialcogicworldmissions1451" target="_blank" class="group relative rounded-3xl w-full md:px-12 overflow-hidden p-1 transition-transform duration-300 transform hover:scale-[1.02]">
     
     <!-- Background Image Container -->
-    <div class="relative h-[200px] sm:h-[250px] md:h-[300px] lg:h-[250px] overflow-hidden rounded-3xl">
+    <div class="relative h-[200px] sm:h-[250px] md:h-[300px] lg:h-[250px] 2xl:h-[280px] overflow-hidden rounded-3xl">
       
       <!-- Background Image -->
       <div
@@ -138,11 +136,11 @@ Serving the Nations.
       <div class="rounded-3xl absolute inset-0 bg-black/70 group-hover:bg-black/80 transition-colors duration-300"></div>
 
       <!-- Main content -->
-      <div class="relative z-10 flex flex-col sm:flex-row gap-4 sm:gap-10 items-center justify-center h-full transition-transform duration-300 group-hover:scale-110">
-        <h2 class="scale-text text-3xl uppercase md:text-5xl font-bold text-white text-center heading transition-all duration-300 group-hover:scale-105">
+      <div class="relative z-10 flex flex-col sm:flex-row gap-2 lg:gap-4 sm:gap-10 items-center justify-center h-full transition-transform duration-300 group-hover:scale-110">
+        <h2 class="text-2xl md:text-3xl lg:text-[3rem] xl:text-[3.3rem] 2xl:text-[4.5rem] uppercase  font-bold text-white text-center heading transition-all duration-300 group-hover:scale-105">
           Click to Watch Live on
         </h2>
-        <img src="assets/images/home/YouTube_logo_(2017).png" class="h-10 md:h-14  " alt="YouTube">
+        <img src="assets/images/home/YouTube_logo_(2017).png" class="h-10 md:h-10 lg:h-14  " alt="YouTube">
       </div>
     </div>
   </a>
@@ -153,17 +151,17 @@ Serving the Nations.
 
     <!-- Who We Are Section -->
     <section class="w-full  my-16 " >
-      <div class="w-full px-2 md:px-12 mx-auto flex flex-col md:flex-row items-center justify-center">
+      <div class="w-full px-2 md:px-12 mx-auto flex flex-col lg:flex-row items-center justify-center">
        
         <div
 
         data-aos="zoom-in-right" 
         data-aos-duration="1000"
 
-        class=" flex-shrink-0  w-full md:w-[60%]   ">
+        class=" flex-shrink-0  w-full lg:w-[60%]   ">
           <img src="assets/images/home/who-we are.png"
                alt="COGIC World Missions outreach work"
-               class=" rounded-2xl  w-full md:w-[90%] h-full object-cover object-left">
+               class=" rounded-2xl  w-full lg:w-[90%] h-full object-cover object-left">
         </div>
         
         <div
@@ -172,8 +170,8 @@ Serving the Nations.
         data-aos-duration="2000"
 
         class=" py-2">
-          <h2 class="text-3xl md:text-6xl  font-bold heading   mb-4">WHO WE ARE</h2>
-          <p class="scale-text md:text-2xl  mb-8 " style="line-height: 1.6; ">
+          <h2 class="text-2xl md:text-4xl lg:text-[3rem] xl:text-[3.3rem] 2xl:text-[4.5rem]  font-bold heading   mb-4">WHO WE ARE</h2>
+          <p class="text-xl md:text-xl/5  lg:text-[1.2rem]/10 xl:text-[1.5rem]/10 2xl:text-[2rem]/13   mb-8 " style="line-height: 1.6; ">
             At COGIC World Missions, our vision is to make disciples in every nation. We are committed to holistic evangelism, leadership empowerment, and raising up kingdom partners across generations. Through strategic outreach and intentional partnerships, we equip spirit-filled believers to go, serve  and make a lasting impact.
           </p>
           <button class=" px-5 mt-2  cursor-pointer py-2 border-2   rounded-full hover:bg-[#21B803] hover:text-white transition">LEARN MORE</button>
@@ -199,9 +197,9 @@ Serving the Nations.
           <div class="rounded-3xl absolute inset-0 bg-black/40"></div>
     
           <!-- Main content -->
-          <div data-aos="zoom-in" data-aos-duration="1000" class="relative z-10 flex flex-col sm:flex-row gap-4 sm:gap-10 items-center justify-center h-full">
+          <div data-aos="zoom-in" data-aos-duration="1000" class="relative z-10 flex flex-col lg:flex-row gap-10 lg:gap-4 items-center justify-center h-full">
             <img src="assets/images/home/yoam.png" class="h-20 md:h-40" alt="yoam">
-            <h3 class="scale-text text-3xl md:text-4xl text-white font-bold text-center heading uppercase">
+            <h3 class=" text-2xl md:text-3xl lg:text-[2rem] xl:text-[2.5rem] 2xl:text-[3rem] text-white font-bold text-center heading uppercase">
               Youth on a mission: upcoming trips
             </h3>
           </div>
@@ -211,13 +209,13 @@ Serving the Nations.
     
 
     <!--slider section--->
-      <section class="flex flex-col md:flex-row items-center justify-between px-6 md:px-12 py-10 w-full mx-auto overflow-hidden relative">
+      <section class="flex flex-col lg:flex-row justify-between px-6 md:px-12 py-10 w-full mx-auto overflow-hidden relative">
     
     <!-- Left Text Side -->
-    <div data-aos="fade-right" data-aos-duration="1500" class="w-full  md:w-[40%] pr-6 py-2">
+    <div data-aos="fade-right" data-aos-duration="1500" class="w-full  lg:w-[40%] lg:pr-6 py-2">
       
-      <h2 class="scale-text text-2xl sm:text-3xl md:text-4xl font-bold mb-4 heading" id="title">ANGOLA</h2>
-      <p class="scale-text mb-6 md:text-2xl" id="desc" style="line-height: 1.6;">
+      <h2 class=" text-2xl md:text-4xl lg:text-[2.2rem] xl:text-[2.6rem] 2xl:text-[3rem] font-bold mb-4 heading" id="title">ANGOLA</h2>
+      <p class=" mb-6 text-xl md:text-xl/ lg:text-[1.2rem]/10 xl:text-[1.5rem]/10 2xl:text-[2rem]/13 " id="desc">
        Prepare for a life-changing mission as we journey through the heart of Angola! Our dedicated team will be serving in vibrant communities like Luanda, Huambo, Benguela, Lubango, and Malanje, sharing love, hope, and the message of faith.
       </p>
       
@@ -225,7 +223,7 @@ Serving the Nations.
     </div>
 
     <!-- Right Image Carousel -->
-    <div class="w-full md:w-[60%] overflow-hidden" data-aos="fade-in" data-aos-duration="1500">
+    <div class="w-full lg:w-[60%] overflow-hidden" data-aos="fade-in" data-aos-duration="1500">
       <div class="flex gap-4 transform slide" id="carousel">
         <!-- Slide 1 -->
         <div class="min-w-[48%] relative rounded-xl  overflow-hidden">
@@ -322,10 +320,10 @@ Serving the Nations.
 
   <!-- Right: Text Content -->
   <div class="w-full md:w-1/2 px-2 md:text-left space-y-4" data-aos="fade-left" data-aos-duration="1500">
-    <h2 class="scale-text text-2xl md:text-5xl font-bold heading uppercase " style="line-height: 1.2;">Ways to<br>
+    <h2 class="text-2xl md:text-3xl lg:text-[2.3rem] xl:text-[2.8rem] 2xl:text-[3.3rem] font-bold heading uppercase " style="line-height: 1.2;">Ways to<br>
 Support cogic<br>
 World missions</h2>
-    <p class=" scale-text md:text-2xl " style="line-height: 1.6;">
+    <p class=" text-xl md:text-xl/ lg:text-[1.2rem]/10 xl:text-[1.5rem]/10 2xl:text-[2rem]/13  " >
       Giving to missions is more than a financial transaction—it’s an act of global discipleship, a step toward healing hearts and communities across borders. We steward each gift with care, so that lives are changed in every nation we reach.
     </p>
   </div>

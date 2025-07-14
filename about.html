@@ -1,0 +1,275 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COGIC World Missions</title>
+    
+    <link rel="stylesheet" href="assets/output.css">
+      <link rel="stylesheet" href="assets/aos.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/ckp8nwm.css">
+</head>
+<body>
+
+  <nav id="mainNavbar" class="bg-white z-20 transition-all  duration-1000 ease-in-out shadow-lg px-3 py3 md:py-5 md:px-0">
+    <div class="max-w-full mx-auto py-5 sm:px-6 lg:px-12 flex items-center justify-between h-20">
+      
+      <!-- Logo Section -->
+      <div class="flex items-center space-x-1 h-15 md:h-20 w-auto 2xl:h-[95px] 2xl:w-[238px]">
+        <img src="assets/images/home/logo.png" alt="Logo" class="w-full h-full">
+      </div>
+  
+      <!-- Desktop Navigation -->
+     <div class="hidden lg:flex  text-lg items-center mx-2 justify-around border-2 border-black rounded-full px-15 py-2 space-x-10 2xl:space-x-15" >
+        <a href="index.html" class="nav-link uppercase md:text-base 2xl:text-[1.25rem] hover:text-[#21B803] " data-link="home">Home</a>
+       <a href="about.html" class="nav-link uppercase md:text-base 2xl:text-[1.25rem]  hover:text-[#21B803]" data-link="about">About</a>
+        <a href=" leadership.html" class="nav-link md:text-base 2xl:text-[1.25rem] uppercase hover:text-[#21B803]" data-link="leadership">Leadership</a>
+        <a href="yoam.html" class="nav-link uppercase md:text-base 2xl:text-[1.25rem] hover:text-[#21B803]" data-link="yoam">Y.O.A.M.</a>
+        <a href="where-we-are.html" class="nav-link md:text-base 2xl:text-[1.25rem] uppercase hover:text-[#21B803]" data-link="where">Where We Are</a>
+        <a href="ondemand.html" class="nav-link md:text-base 2xl:text-[1.25rem] uppercase hover:text-[#21B803]" data-link="ondemand">On Demand</a>
+        <a href="give.html" class="nav-link md:text-base 2xl:text-[1.25rem] uppercase hover:text-[#21B803]" data-link="give">Give</a>
+      </div>
+  
+      <!-- Social Icons -->
+      <div class="hidden lg:flex items-center space-x-2 h-10 w-10 2xl:h-[58px] 2xl:w-[58px]">
+        <a href="https://www.facebook.com/COGICWorldMissions/" target="_blank"><img src="assets/images/home/fb-icon.png" alt="facebook" class="h-full w-full cursor-pointer"></a>
+      <!--  <a href="#"><img src="assets/images/home/insta-icon.png" alt="instagram" class="h-5 sm:h-6 md:h-8 lg:h-10 w-auto cursor-pointer"></a> -->
+      </div>
+  
+      <!-- Hamburger Menu -->
+      <div class="lg:hidden">
+        <button onclick="toggleMenu()" id="menuToggleBtn">
+          <!-- Default icon -->
+          <svg id="menuIcon" class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="menuIconPath" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="lg:hidden hidden px-4 py-4 border-t">
+      <nav class="flex flex-col space-y-4 text-sm uppercase">
+        <a href="index.html" class="mobile-link hover:text-[#21B803]">Home</a>
+        <a href="about.html" class="mobile-link hover:text-[#21B803]">About</a>
+        <a href="#" class="mobile-link hover:text-[#21B803]">Leadership</a>
+        <a href="#" class="mobile-link hover:text-[#21B803]">Y.O.A.M.</a>
+        <a href="#" class="mobile-link hover:text-[#21B803]">Where We Are</a>
+        <a href="#" class="mobile-link hover:text-[#21B803]">On Demand</a>
+        <a href="#" class="mobile-link hover:text-[#21B803]">Give</a>
+        <div class="flex space-x-4 pt-4 border-t mt-2">
+          <a href="https://www.facebook.com/COGICWorldMissions/" target="_blank"><img src="assets/images/home/fb-icon.png" alt="facebook" class="h-10 w-auto"></a>
+        <!--  <a href="#"><img src="assets/images/home/insta-icon.png" alt="instagram" class="h-10 w-auto"></a> -->
+        </div>
+      </nav>
+    </div>
+  </nav>
+
+<!--wrapper-->
+<div class="wrapper w-full mx-auto px-4 md:px-12  ">
+
+  <section  class="w-full" >
+    <div class="   mt-10 bg-white rounded-3xl py-20 px-2 md:px-0">
+    <h1 class="scale-text uppercase heading text-2xl md:text-4xl lg:text-[3rem] xl:text-[3.3rem] 2xl:text-[4.5rem] bold text-center  ">About cogic world missions</h1>
+    </div>
+  </section>
+  
+  
+    <!-- Who We Are Section -->
+    <section class="w-full  my-16 " >
+      <div class="w-full   mx-auto flex flex-col md:flex-row justify-center  md:justify-between">
+       
+         <div
+        
+         data-aos="zoom-in" 
+        data-aos-duration="2000"
+
+        class=" py-2">
+          <h2 class="text-2xl md:text-4xl lg:text-[3rem] xl:text-[3.3rem] 2xl:text-[4.5rem]  font-bold heading pr-5   mb-4">WHO WE ARE</h2>
+          <p class="text-xl/ md:text-xl/ lg:text-[1.2rem]/10 xl:text-[1.5rem]/10 2xl:text-[2rem]/13 mb-8 ">
+            At COGIC World Missions, our vision is to make disciples in every nation. We are committed to holistic evangelism, leadership empowerment, and raising up kingdom partners across generations. Through strategic outreach and intentional partnerships, we equip spirit-filled believers to go, serve  and make a lasting impact.
+          </p>
+        
+        </div>
+
+        <div
+
+        data-aos="zoom-in-right" 
+        data-aos-duration="1000"
+
+        class=" flex-shrink-0  w-full md:w-[60%]   ">
+          <img src="assets/images/home/who-we are.png"
+               alt="COGIC World Missions outreach work"
+               class=" rounded-2xl  w-full md:w-full h-full md:pl-5  object-cover  ">
+        </div>
+        
+       
+      </div>
+    </section>
+
+
+
+  
+    <!--vision section-->
+    <section class="my-16">
+        <h2 class="text-2xl md:text-4xl lg:text-[3rem] xl:text-[3.3rem] 2xl:text-[4.5rem]  font-bold heading  uppercase mb-4">Our vision</h2>
+        <p class="text-xl md:text-xl/ lg:text-[1.2rem]/10 xl:text-[1.5rem]/10 2xl:text-[2rem]/13  mb-8 " >
+            Our vision is to make disciples in every nation in the world.  
+          </p>
+    </section>
+
+      <!--Mission section-->
+    <section class="my-16">
+        <h2 class="text-2xl md:text-4xl lg:text-[3rem] xl:text-[3.3rem] 2xl:text-[4.5rem]  font-bold heading uppercase  mb-4">Our Mission</h2>
+        <p class="text-xl md:text-xl/ lg:text-[1.2rem]/10 xl:text-[1.5rem]/10 2xl:text-[2rem]/13  mb-8 " style="line-height: 1.6; ">
+            - To lead people to Christ through holistic evangelism, training them to be spirit-filled disciples. <br>
+- To empower pastors and plant spirit-filled churches. <br>
+- To recruit diverse and lasting kingdom partners, of all generations, who will invest resources in 
+   the vision. <br><br>
+
+We will do this through strategic platforms to promote Missions awareness.  
+          </p>
+    </section>
+   
+<!--five pillars of mission-->
+    <section  class="w-full" >
+    <div class="   mt-10 bg-white rounded-3xl py-20 px-2 md:px-0">
+    <h1 class="scale-text uppercase heading text-2xl md:text-4xl lg:text-[3rem] xl:text-[3.3rem] 2xl:text-[4.5rem] text-center  ">The five pillars of missions</h1>
+    </div>
+  </section>
+
+<div class="flex flex-wrap justify-center gap-3 py-8">
+  <!-- Box 1 -->
+  <div class="bg-[#21B803] text-white rounded-2xl w-[45%] sm:w-[30%] md:w-[19%] aspect-[2/3] flex items-center justify-center text-center px-2">
+    <p class="text-xl md:text-xl/ lg:text-[1.2rem]/10 xl:text-[1.5rem]/10 2xl:text-[2rem]/13">Holistic<br />Evangelism</p>
+  </div>
+
+  <!-- Box 2 -->
+  <div class="bg-[#21B803] text-white rounded-2xl w-[45%] sm:w-[30%] md:w-[19%] aspect-[2/3] flex items-center justify-center text-center px-2">
+    <p class="text-xl md:text-xl/ lg:text-[1.2rem]/10 xl:text-[1.5rem]/10 2xl:text-[2rem]/13">Discipleship</p>
+  </div>
+
+  <!-- Box 3 -->
+  <div class="bg-[#21B803] text-white rounded-2xl w-[45%] sm:w-[30%] md:w-[19%] aspect-[2/3] flex items-center justify-center text-center px-2">
+    <p class="text-xl md:text-xl/ lg:text-[1.2rem]/10 xl:text-[1.5rem]/10 2xl:text-[2rem]/13">Pastoral<br />Empowerment</p>
+  </div>
+
+  <!-- Box 4 -->
+  <div class="bg-[#21B803] text-white rounded-2xl w-[45%] sm:w-[30%] md:w-[19%] aspect-[2/3] flex items-center justify-center text-center px-2">
+    <p class="text-xl md:text-xl/ lg:text-[1.2rem]/10 xl:text-[1.5rem]/10 2xl:text-[2rem]/13">Church<br />Planting</p>
+  </div>
+
+  <!-- Box 5 -->
+  <div class="bg-[#21B803] text-white rounded-2xl w-[95%] sm:w-[60%] md:w-[19%] aspect-[2/3] flex items-center justify-center text-center px-2">
+    <p class="text-xl md:text-xl/ lg:text-[1.2rem]/10 xl:text-[1.5rem]/10 2xl:text-[2rem]/13">Missions<br />Awareness and<br />Support</p>
+  </div>
+</div>
+
+
+
+  <!--Leadership-->
+    <section  class="w-full" >
+    <div class="   mt-10 bg-white rounded-3xl py-20 px-2 md:px-0">
+    <h1 class="scale-text uppercase heading text-2xl md:text-4xl lg:text-[3rem] xl:text-[3.3rem] 2xl:text-[4.5rem] text-center  ">Our leadership</h1>
+    </div>
+  </section>
+
+
+  
+    <!-- Newsletter Subscription Section -->
+    
+    <section 
+    
+    data-aos="zoom-in" 
+        data-aos-duration="1500"
+    
+    class="w-full py-16 px-10  flex flex-col items-center justify-center">
+      <h2 class="text-3xl md:text-5xl font-bold text-center capitalize mb-2 heading">CONNECT WITH US</h2>
+      <p class="text-center text-lg line-clamp-3 max-w-xl mb-8">
+       Our COGIC World Missions newsletter provides updates on outreach mission opportunities. Submit your name and email address to receive our monthly newsletter. 
+      </p>
+      <form class="w-full max-w-4xl flex flex-col justify-center items-center ">
+        <div class="flex flex-col lg:flex-row w-full gap-2 mb-6">
+          <input type="text" placeholder="First Name"  class=" bg-white flex-1 border placeholder-black border-black px-7 py-3 rounded-none focus:outline-none" />
+          <input type="text" placeholder="Last Name" class="bg-white flex-1 border placeholder-black border-black px-7 py-3 rounded-none focus:outline-none" />
+          <input type="email" placeholder="Email Address" class="bg-white flex-1 border placeholder-black border-black px-7 py-3 rounded-none focus:outline-none" />
+        </div>
+        <button type="submit" class="bg-[#21B803] cursor-pointer text-white px-7 py-3 rounded-full font-semibold transition hover:bg-green-600">Subscribe Now</button>
+      </form>
+    </section>
+
+    </div>
+
+
+ 
+    <!-- Footer -->
+<footer class="bg-[#f7f7f7] py-12 md:px-12">
+  <div class="w-full px-[5%] mx-auto grid grid-cols-1 md:grid-cols-5 gap-10">
+    
+    <!-- Logo & Description -->
+    <div class="md:col-span-2">
+      <div class="flex items-center mb-3">
+       
+        <img src="assets/images/home/logo.png" alt="COGIC World Missions Logo" class="h-22 w-auto mr-3">
+      </div>
+      <p class="text-sm text-gray-800 leading-relaxed mt-">
+        COGIC World Missions exists to fulfill Christ's command to make disciples of all nations. Actively serving in 113 countries under Presiding Bishop J. Drew Sheard, the ministry encourages leaders at every level of the Church of God in Christ to renew their focus on global outreach. By addressing both spiritual growth and real-world challenges, the mission aims to deepen the church's global impact.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h4 class=" mb-3 uppercase heading">Quick Links</h4>
+      <ul class="space-y-1 text-sm text-black">
+        <li><a href="#" class="hover:text-[#21B803] underline">Home</a></li>
+        <li><a href="#" class="hover:text-[#21B803] underline">About</a></li>
+        <li><a href="#" class="hover:text-[#21B803] underline">Leadership</a></li>
+        <li><a href="#" class="hover:text-[#21B803] underline">Events</a></li>
+        <li><a href="#" class="hover:text-[#21B803] underline">Online Training</a></li>
+      </ul>
+    </div>
+
+    <!-- Who We Are -->
+    <div>
+      <h4 class="  mb-3 uppercase heading">Who We Are</h4>
+      <ul class="space-y-1 text-sm text-black">
+        <li><a href="#" class="hover:text-[#21B803] underline">Our History</a></li>
+        <li><a href="#" class="hover:text-[#21B803] underline">Our Affiliation</a></li>
+        <li><a href="#" class="hover:text-[#21B803] underline">COGIC</a></li>
+        <li><a href="#" class="hover:text-[#21B803] underline">Statement of Faith</a></li>
+        <li><a href="#" class="hover:text-[#21B803] underline">Executive Team</a></li>
+        <li><a href="#" class="hover:text-[#21B803] underline">Executive Staff</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div>
+      <h4 class=" mb-3 uppercase heading">Contact Us</h4>
+      <p class="text-sm text-black leading-relaxed">
+        <span class="font-bold heading">COGIC World Missions</span><br>
+        938 Mason Street<br>
+        Memphis, TN 38126<br><br>
+        Tel: (901) 947-9316<br>
+        Cogicworldmissions@cogic.org
+      </p>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class=" text-center md:text-end mt-4 md:mt-0  md:mr-20 text-sm   ">
+    Copyright © 2024 TechChurch.io. All Rights Reserved.
+  </div>
+</footer>
+
+  <script src="assets/aos.js"></script>
+  <script src="assets/script.js"></script>
+
+
+</body>
+</html>
