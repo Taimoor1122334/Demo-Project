@@ -9,6 +9,10 @@ body{
   font-family: poppins; 
   overflow-x: hidden;
 }
+#activeLink {
+  color: #21B803; /* Active link color */
+  
+}
 .heading{
     font-family: itc-avant-garde-gothic-pro, sans-serif;
 }

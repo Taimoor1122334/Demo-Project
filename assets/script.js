@@ -1,26 +1,8 @@
   AOS.init();
  
 
-document.addEventListener("DOMContentLoaded", () => {
-  let currentPath = window.location.pathname;
-  currentPath = currentPath.endsWith("/") ? "index.html" : currentPath.split("/").pop();
 
-  if (!currentPath.includes(".html")) {
-    currentPath += ".html";
-  }
 
-  document.querySelectorAll(".nav-link").forEach(link => {
-    const href = link.getAttribute("href").trim();
-
-    if (href === currentPath) {
-      link.classList.add("text-[#21B803]");
-      link.classList.remove("text-black");
-    } else {
-      link.classList.remove("text-[#21B803]");
-      link.classList.add("text-black");
-    }
-  });
-});
 
   function toggleMenu() {
     const mobileMenu = document.getElementById("mobileMenu");
