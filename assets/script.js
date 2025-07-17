@@ -8,6 +8,7 @@
     const href = link.getAttribute('href');
     
     // Highlight active link based on URL
+    
     if (href === currentPath || (href === 'index.html' && currentPath === '')) {
       link.classList.add('text-[#21B803]');
     } else {
