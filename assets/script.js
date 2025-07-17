@@ -1,22 +1,21 @@
   AOS.init();
  
-  document.addEventListener('DOMContentLoaded', function () {
-  const currentPath = window.location.pathname.split('/').pop(); // e.g., 'about.html'
-  const links = document.querySelectorAll('.nav-link');
 
-  links.forEach(link => {
-    const href = link.getAttribute('href');
-    
-    // Highlight active link based on URL
-    
-    if (href === currentPath || (href === 'index.html' && currentPath === '')) {
-      link.classList.add('text-[#21B803]');
-    } else {
-      link.classList.remove('text-[#21B803]');
-      link.classList.add('text-black');
-    }
+   document.addEventListener("DOMContentLoaded", () => {
+    const currentPath = window.location.pathname.split("/").pop() || "index.html";
+
+    document.querySelectorAll(".nav-link").forEach(link => {
+      const href = link.getAttribute("href").trim();
+
+      if (href === currentPath) {
+        link.classList.add("text-[#21B803]");
+        link.classList.remove("text-black");
+      } else {
+        link.classList.remove("text-[#21B803]");
+        link.classList.add("text-black");
+      }
+    });
   });
-});
 
   function toggleMenu() {
     const mobileMenu = document.getElementById("mobileMenu");
