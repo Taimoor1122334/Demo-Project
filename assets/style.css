@@ -3,6 +3,17 @@
 
 @import "tailwindcss";
      
+@layer component{
+
+   .nav-link{
+    @apply uppercase   hover:text-[#21B803];
+  }
+  .button{
+    @apply inline-block px-5 mt-2 text-base cursor-pointer py-2 border-2   rounded-full hover:bg-[#21B803] hover:text-white transition
+  }
+
+}
+
      
 body{
  background-color: #F2F2F2;
