@@ -4,21 +4,36 @@
 
 
 
+  <script>
   function toggleMenu() {
     const mobileMenu = document.getElementById("mobileMenu");
+    const nav = mobileMenu.querySelector("nav");
     const menuIconPath = document.getElementById("menuIconPath");
 
-    // Toggle visibility
-    mobileMenu.classList.toggle("hidden");
+    const isClosed = mobileMenu.classList.contains("max-h-0");
 
-    // Toggle icon between hamburger and X
-    const isMenuOpen = !mobileMenu.classList.contains("hidden");
-    if (isMenuOpen) {
+    if (isClosed) {
+      // Open menu with animation
+      mobileMenu.classList.remove("max-h-0", "py-0");
+      mobileMenu.classList.add("max-h-[1000px]", "py-4");
+
+      nav.classList.remove("opacity-0", "scale-y-0");
+      nav.classList.add("opacity-100", "scale-y-100");
+
       menuIconPath.setAttribute("d", "M6 18L18 6M6 6l12 12"); // Cross icon
     } else {
-      menuIconPath.setAttribute("d", "M4 6h16M4 12h16M4 18h16"); // Hamburger
+      // Close menu with animation
+      mobileMenu.classList.remove("max-h-[1000px]", "py-4");
+      mobileMenu.classList.add("max-h-0", "py-0");
+
+      nav.classList.remove("opacity-100", "scale-y-100");
+      nav.classList.add("opacity-0", "scale-y-0");
+
+      menuIconPath.setAttribute("d", "M4 6h16M4 12h16M4 18h16"); // Hamburger icon
     }
   }
+</script>
+
 
   // Close mobile menu on link click
   document.querySelectorAll('.mobile-link').forEach(link => {
