@@ -5,15 +5,81 @@
      
 @layer component{
 
+  h1{
+    @apply text-3xl md:text-4xl xl:text-6xl  uppercase font-bold leading-normal
+  }
+  h2{
+    @apply text-2xl  md:text-4xl lg:text-[3rem] xl:text-[3.3rem]  font-bold 
+  }
+  p{
+    @apply text-xl lg:text-[1.2rem]/10 xl:text-[1.5rem]/10
+  }
+  .footer-text{
+    @apply text-sm  leading-relaxed
+  }
    .nav-link{
     @apply uppercase   hover:text-[#21B803];
   }
   .button{
     @apply inline-block px-5 mt-2 text-base cursor-pointer py-2 border-2   rounded-full hover:bg-[#21B803] hover:text-white transition
   }
+   .btn{
+    @apply inline-flex justify-center items-center uppercase cursor-pointer text-lg text-white  bg-[#21B803] rounded-full px-10 py-2.5  hover:bg-green-600 transition duration-300 
 
 }
 
+.five-pillars .pillar{
+  @apply  relative  rounded-4xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer min-h-[400px]
+}
+
+.five-pillars .pillar .card-image{
+  @apply w-full h-full object-cover
+}
+.five-pillars .pillar .heading{
+  @apply text-white font-bold max-w-[150px] text-xl
+}
+.leaders .leader-card{
+  @apply    max-w-[400px] h-auto
+
+}
+.leaders .leader-card img{
+  @apply w-full h-auto rounded-4xl
+}
+
+.leaders .leader-info h4{
+  @apply font-semibold text-lg md:text-xl lg:text-2xl
+
+}
+.leaders .leader-info p{
+  @apply text-lg lg:text-xl
+
+}
+
+.funds .fund-card {
+  max-width: 380px;
+  height: 350px;
+}
+.funds .fund-card img {
+
+  @apply h-full w-full bg-cover rounded-3xl
+}
+
+.funds .fund-card:hover img{
+  transform: scale(1.1);
+}
+ .ministry-card:hover .card-image {
+            transform: scale(1.1);
+        }
+
+.funds .fund-card h3{
+  @apply text-xl md:text-2xl lg:text-3xl text-white underline max-w-[300px] uppercase
+}
+
+
+}
+ .active {
+    color: #21B803 !important;
+  }
      
 body{
  background-color: #F2F2F2;

@@ -5,6 +5,26 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(".nav-link");
+
+    // Highlight based on current URL
+    let currentPage = window.location.pathname.split("/").pop();
+    if (!currentPage) currentPage = "index.html"; // default Home
+
+    links.forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      }
+
+      // On click, remove active from all and add to clicked
+      link.addEventListener("click", function () {
+        links.forEach(l => l.classList.remove("active"));
+        this.classList.add("active");
+      });
+    });
+  });
+
 // Mobile menu toggle (global for inline onclick)
 function toggleMenu() {
   const mobileMenu = document.getElementById('mobileMenu');
