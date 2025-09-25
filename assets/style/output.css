@@ -869,9 +869,6 @@
   .whitespace-nowrap {
     white-space: nowrap;
   }
-  .text-\[\#21B803\] {
-    color: #21B803;
-  }
   .text-black {
     color: var(--color-black);
   }
@@ -1142,11 +1139,6 @@
   .md\:mr-20 {
     @media (width >= 48rem) {
       margin-right: calc(var(--spacing) * 20);
-    }
-  }
-  .md\:flex {
-    @media (width >= 48rem) {
-      display: flex;
     }
   }
   .md\:h-8 {
@@ -1559,7 +1551,7 @@
     --tw-leading: var(--leading-relaxed);
     line-height: var(--leading-relaxed);
   }
-  .nav-link {
+  .mobile-link , .nav-link {
     text-transform: uppercase;
     &:hover {
       @media (hover: hover) {

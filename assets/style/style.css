@@ -17,7 +17,7 @@
   .footer-text{
     @apply text-sm  leading-relaxed
   }
-   .nav-link{
+   .mobile-link , .nav-link{
     @apply uppercase   hover:text-[#21B803];
   }
   .button{
