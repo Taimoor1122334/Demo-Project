@@ -1201,9 +1201,19 @@
       flex-direction: row;
     }
   }
+  .md\:gap-1 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 1);
+    }
+  }
   .md\:gap-6 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 6);
+    }
+  }
+  .md\:gap-14 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 14);
     }
   }
   .md\:gap-16 {
