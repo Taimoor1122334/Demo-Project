@@ -5,27 +5,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const links = document.querySelectorAll(".nav-link");
 
-  // Get current path (last part, without .html extension)
-  let currentPage = window.location.pathname.split("/").pop();
-  if (!currentPage) currentPage = "index.html"; // default home
-  currentPage = currentPage.replace(".html", ""); // remove .html if exists
-
-  links.forEach(link => {
-    let href = link.getAttribute("href").replace(".html", ""); // normalize
-    if (href === currentPage) {
-      link.classList.add("active");
-    }
-
-    // On click, remove active from all and add to clicked
-    link.addEventListener("click", function () {
-      links.forEach(l => l.classList.remove("active"));
-      this.classList.add("active");
-    });
-  });
-});
 
 // Mobile menu toggle (global for inline onclick)
 function toggleMenu() {

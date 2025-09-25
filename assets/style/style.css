@@ -17,6 +17,10 @@
   .footer-text{
     @apply text-sm  leading-relaxed
   }
+
+  .active-link{
+    @apply text-[#21B803];
+  }
    .mobile-link , .nav-link{
     @apply uppercase   hover:text-[#21B803];
   }

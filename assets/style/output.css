@@ -1560,6 +1560,9 @@
     --tw-leading: var(--leading-relaxed);
     line-height: var(--leading-relaxed);
   }
+  .active-link {
+    color: #21B803;
+  }
   .mobile-link , .nav-link {
     text-transform: uppercase;
     &:hover {
