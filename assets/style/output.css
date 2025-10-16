@@ -1236,6 +1236,16 @@
       padding-block: calc(var(--spacing) * 5);
     }
   }
+  .md\:py-15 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 15);
+    }
+  }
+  .md\:py-30 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 30);
+    }
+  }
   .md\:text-end {
     @media (width >= 48rem) {
       text-align: end;
@@ -1347,6 +1357,16 @@
   .lg\:px-12 {
     @media (width >= 64rem) {
       padding-inline: calc(var(--spacing) * 12);
+    }
+  }
+  .lg\:py-20 {
+    @media (width >= 64rem) {
+      padding-block: calc(var(--spacing) * 20);
+    }
+  }
+  .lg\:py-40 {
+    @media (width >= 64rem) {
+      padding-block: calc(var(--spacing) * 40);
     }
   }
   .lg\:pr-6 {
