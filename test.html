@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Popup - Tailwind</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex flex-wrap justify-center gap-8 p-10">
+
+<section class="px-3 max-w-[1440px] mx-auto sm:px-6 lg:px-12">
+  <div class="py-10 grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center">
+
+    <!-- Video Card 1 -->
+    <div class="text-center">
+      <div class="max-w-[593px] h-auto relative rounded-2xl overflow-hidden shadow-lg">
+        <img
+          src="https://img.youtube.com/vi/xlnLdp-ANXE/hqdefault.jpg"
+          alt="Video Thumbnail"
+          class="w-full h-auto"
+        />
+        <button
+          onclick="openVideo('https://www.youtube.com/embed/xlnLdp-ANXE')"
+          class="absolute inset-0 flex items-center justify-center bg-black/40 hover:bg-black/60 transition"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-16 h-16">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </button>
+      </div>
+      <div class="mt-3">
+        <button
+          onclick="openVideo('https://www.youtube.com/embed/xlnLdp-ANXE')"
+          class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg transition shadow-md"
+        >
+          Watch video now
+        </button>
+      </div>
+    </div>
+
+    <!-- You can duplicate above card for more videos -->
+  </div>
+</section>
+
+<!-- Popup Modal -->
+<div id="videoPopup" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50">
+  <div
+    id="popupContent"
+    class="bg-white rounded-xl overflow-hidden transform scale-0 transition-transform duration-300 ease-out relative max-w-[90%] sm:max-w-[800px]"
+  >
+    <!-- Close Icon -->
+    <button
+      onclick="closeVideo()"
+      class="absolute top-2 right-2 bg-black/60 hover:bg-black/80 text-white rounded-full p-2 transition"
+      aria-label="Close"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <!-- Video -->
+    <iframe
+      id="videoFrame"
+      width="800"
+      height="450"
+      class="w-full aspect-video"
+      src=""
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>
+
+<script>
+   const popup = document.getElementById("videoPopup");
+  const popupContent = document.getElementById("popupContent");
+  const videoFrame = document.getElementById("videoFrame");
+
+  function openVideo(url) {
+    videoFrame.src = url + "?autoplay=1";
+    popup.classList.remove("hidden");
+
+    // scale animation
+    setTimeout(() => {
+      popup.classList.add("flex");
+      popupContent.classList.remove("scale-0");
+      popupContent.classList.add("scale-100");
+    }, 10);
+  }
+
+  function closeVideo() {
+    popupContent.classList.remove("scale-100");
+    popupContent.classList.add("scale-0");
+    setTimeout(() => {
+      popup.classList.add("hidden");
+      videoFrame.src = "";
+    }, 300);
+  }
+</script>
+
+
+</body>
+</html>
