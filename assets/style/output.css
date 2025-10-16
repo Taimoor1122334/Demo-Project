@@ -407,6 +407,9 @@
   .max-h-0 {
     max-height: calc(var(--spacing) * 0);
   }
+  .min-h-\[60vh\] {
+    min-height: 60vh;
+  }
   .min-h-\[80vh\] {
     min-height: 80vh;
   }
