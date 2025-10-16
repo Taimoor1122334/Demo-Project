@@ -415,6 +415,9 @@
   .h-\[200px\] {
     height: 200px;
   }
+  .h-\[315px\] {
+    height: 315px;
+  }
   .h-\[400px\] {
     height: 400px;
   }
@@ -1474,6 +1477,11 @@
       flex-direction: row;
     }
   }
+  .lg\:gap-3 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 3);
+    }
+  }
   .lg\:gap-4 {
     @media (width >= 64rem) {
       gap: calc(var(--spacing) * 4);
@@ -1482,6 +1490,11 @@
   .lg\:gap-10 {
     @media (width >= 64rem) {
       gap: calc(var(--spacing) * 10);
+    }
+  }
+  .lg\:gap-30 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 30);
     }
   }
   .lg\:gap-35 {
