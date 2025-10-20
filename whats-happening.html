@@ -1,0 +1,371 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COGIC World Missions</title>
+    
+    <link rel="stylesheet" href="assets/style/output.css">
+      <link rel="stylesheet" href="assets/aos.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/ckp8nwm.css">
+</head>
+<body>
+
+<nav id="mainNavbar" class="bg-white z-20 transition-all  duration-1000 ease-in-out shadow-lg px-3  md:py-5 md:px-0">
+    <div class="max-w-[1440px] mx-auto py-5 sm:px-6 lg:px-12 flex items-center justify-between h-20">
+      
+      <!-- Logo Section -->
+      <div class="flex items-center space-x-1  h-auto w-[200px] ">
+        <img src="assets/images/logo.png" alt="website Logo" class="w-full h-full">
+      </div>
+  
+      <!-- Desktop Navigation -->
+      <div class="hidden lg:flex w-4xl items-center mx-2 justify-around border-2 border-black rounded-full px-12 py-2 space-x-6" style="font-family: poppins;">
+        <a href="index.html" class="nav-link  " data-link="home">Home</a>
+        
+        <div class="relative dropdown-container">
+            <a href="about.html" class="nav-link  " data-link="about">About</a>
+            
+            <div class="dropdown-menu absolute left-0 transform  top-full mt-1 hidden bg-white border-2 border-black shadow-lg z-50  min-w-max">
+                <div class="py-1">
+                    <a href="about.html#who-we-are" class="block px-4 py-2 text-black hover:bg-gray-100 whitespace-nowrap">Who We Are</a>
+                    <a href="about.html#leadership" class="block px-4 py-2 text-black hover:bg-gray-100 whitespace-nowrap">Leadership</a>
+                </div>
+            </div>
+        </div>
+
+        <a href="ways-to-serve.html" class="nav-link  " data-link="ways to serve">Ways to serve</a>
+        <a href="whats-happening.html" class="nav-link active-link" data-link="whats hapening">What's Happening</a>
+        <a href="media.html" class="nav-link  " data-link="media">Media</a>
+        <a href="give.html" class="nav-link  " data-link="give">Give</a>
+    </div>
+
+
+  
+      <!-- Social Icons -->
+      <div class="hidden lg:flex items-center space-x-2 h-auto  ">
+     <a href="https://www.facebook.com/COGICWorldMissions/" target="_blank">  <div class="sr-only" >Follow on Facebook</div> <img src="assets/images/fb-icon.png" alt="facebook" class="h-10 w-10 cursor-pointer"></a>
+       <a href="#"><img src="assets/images/insta-icon.png" alt="instagram" class="h-10 w-10 cursor-pointer"></a> 
+      </div>
+  
+      <!-- Hamburger Menu -->
+      <div class="lg:hidden">
+        <button onclick="toggleMenu()" id="menuToggleBtn">
+          <!-- Default icon -->
+          <svg id="menuIcon" class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="menuIconPath" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="lg:hidden hidden px-4 py-4 border-t">
+      <nav class="flex flex-col space-y-4 text-sm uppercase">
+        <a href="index.html" class="mobile-link hover:text-[#21B803]">Home</a>
+
+        <!-- Mobile Dropdown: About -->
+        <button type="button" class="flex items-center justify-between w-full text-left hover:text-[#21B803] mobile-dropdown-toggle">
+          <a href="about.html" >About</a>
+          <svg class="w-4 h-4 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M6 9l6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+        <div class="mobile-submenu hidden max-h-0 overflow-hidden transition-all duration-300">
+          <div class="pl-4 flex flex-col space-y-3 ">
+            <a href="about.html#who-we-are" class="mobile-link ">Who We Are</a>
+            <a href="about.html#leadership" class="mobile-link ">Leadership</a>
+          </div>
+        </div>
+
+        <a href="leadership.html" class="mobile-link ">Ways to serve</a>
+        <a href="yoam.html" class="mobile-link ">What's Happening</a>
+        <a href="media.html" class="mobile-link ">Media</a>
+        <a href="give.html" class="mobile-link ">Give</a>
+        <div class="flex space-x-4 pt-4 border-t mt-2">
+       <a href="https://www.facebook.com/COGICWorldMissions/" target="_blank"><span class="sr-only">Follow on facebook Facebook </span><img src="assets/images/fb-icon.png" alt="facebook" class="h-10 w-auto"></a>
+         <a href="#"><img src="assets/images/insta-icon.png" alt="instagram"  target="_blank" class="h-10 w-auto"></a> 
+        </div>
+      </nav>
+    </div>
+  </nav>
+
+  <section class="px-3 max-w-[1440px] mx-auto sm:px-6 lg:px-12">
+    <div class="text-center mt-7 md:mt-15 lg:mt-20"><h1>what's happening</h1></div>
+
+  </section>
+
+  <section class="px-3 max-w-[1440px] mx-auto sm:px-6 lg:px-12">
+
+
+    <!-- card 1 -->
+<div class="p-5 border-2 rounded-3xl mt-7 md:mt-15 lg:mt-20">
+
+    <div class="[&_img]:h-full [&_img]:w-full [&_img]:rounded-3xl">
+        <img src="assets/images/elder_carl.png" alt="elder_carl">
+    </div>
+
+    <!-- content  -->
+    <div class="mt-5 [&_h3]:text-black [&_h3]:text-start">
+
+        <div  class="cardText overflow-hidden transition-all duration-1500 ease-in-out max-h-70">
+        <div class="py-4 md:py-7 lg:py-10">
+        <h3>A Different Kind of Leader</h3>
+        <h4>By: Elder Carl Sims </h4>
+        </div>
+
+        <p >
+          In June 2019, I had the opportunity to go on my first mission trip to Mozambique, and it changed my life in ways I still carry with me today. Our team handed out medications, distributed vitamins, and prayed for children and families who had traveled miles just to receive basic care. What stood out to me most wasn’t just the need—but the overwhelming gratitude of the people. With every vitamin or prayer, they responded with such joy and humility. Even though we were the ones giving, I walked away feeling like I was the one who had received the most. 
+
+What stood out most behind the scenes was something many might overlook about Bishop Rhone, my father-in-law—his steadfast heart for serving people with love and humility.While others were focused on schedules and supplies, Bishop Rhone was focused on souls. He moved among the people with genuine care and purpose—offering words of comfort, speaking directly to their needs, and making sure every person felt seen and valued. He consistently checked in with our team, providing encouragement, wisdom, and strength throughout each day. 
+
+One moment that I’ll never forget was when a man came through the line with a cloth covering his mouth. He had cancer and was ashamed of how it looked. As he stepped forward, Bishop Rhone gently asked him to remove the covering. The man hesitated at first, clearly embarrassed, but Bishop Rhone looked him in the eye and said, “Remove your cover—I will do my best to help.” That moment of compassion spoke louder than any sermon. He treated that man with dignity, reminding all of us that God sees beyond outward appearances and reaches to heal the brokenhearted. 
+
+I saw Bishop Rhone work tirelessly without complaint. He wasn’t just a leader who gave instructions—he was hands-on. Whether it was helping unload boxes, translating, or comforting someone who was overwhelmed, he served with humility and consistency. His presence reminded us all of why we were there: not just to meet physical needs, but to share the love of Jesus. 
+
+Watching Bishop Rhone in that environment gave me a new level of respect and admiration. It’s easy to be inspired by someone when they’re on stage or in the pulpit, but it’s in the quiet, unseen moments where true leadership is revealed. In Mozambique, there was no spotlight—just dusty roads, long days, and hurting people. And that’s where Bishop Rhone shined the brightest. 
+
+Beyond the mission field, I’ve seen Bishop Rhone walk with the same heart in our church and in our family. He is steady, prayerful, and deeply committed to serving others. His example has shaped the way I view ministry. It’s not just about speaking or leading—it’s about loving, giving, and going wherever God sends you. 
+
+That trip reminded me that ministry isn’t about being perfect. It’s about being available. Bishop Rhone modeled that in every way, and it left a permanent mark on my life. 
+        </p>
+        </div>
+
+        <div class="mt-5">
+            <button class="button toggleBtn" >READ MORE</button>
+        </div>
+
+    </div>
+
+</div>
+
+
+  <!-- card 2 -->
+<div class="p-5 border-2 rounded-3xl mt-7 md:mt-15 lg:mt-20">
+
+    <div class="[&_img]:h-full [&_img]:w-full [&_img]:rounded-3xl">
+        <img src="assets/images/rohan-reddy-pMJPkwBqNTs-unsplash.png" alt=" A Life-Changing Mission to Mozambiqu">
+    </div>
+
+    <!-- content  -->
+    <div class="mt-5 [&_h3]:text-black [&_h3]:text-start">
+
+        <div  class="cardText overflow-hidden transition-all duration-1500 ease-in-out max-h-70">
+        <div class="py-4 md:py-7 lg:py-10">
+        <h3>Answering the Call: A Life-Changing Mission to Mozambique</h3>
+        <h4>By: Elder Gregory L. McNair, Jr. </h4>
+        </div>
+
+        <p >
+      In June of 2024, I had the privilege of experiencing something that will remain etched in my heart for a lifetime—a journey to Mozambique, Africa, as part of a powerful medical mission under the leadership of our beloved President of International Missions for the Church of God in Christ. Traveling alongside him, our gracious First Lady, and an extraordinary team of missionaries, I witnessed the hand of God moving mightily across the earth. Prior to this trip, I wrestled with being able to go. While our president was very open to the financial responsibility and the time to take care of it, I felt this strong nudging to go and be a part of the team. This nudge came during one of the interest meetings via Zoom. After hearing the testimonies of those who have previously gone, I knew that I was supposed to be involved in this moment. As a consequence, I’m proud to say the Lord made the way for me to go.
+
+Mozambique, known as the third poorest nation in the world, is a place where the hunger for healing, hope, and the Gospel is almost tangible. Out of our team of 20, half were missionaries from Brazil who serve under the President’s jurisdiction, and the others were faithful members of his local church in Pomona, California. Together, we formed a unified front of compassion, service, and Kingdom purpose.
+
+Our arrival at the airport was nothing short of awe-inspiring. We were greeted by the local church’s worship team, dancers, and ministerial leaders who welcomed us with vibrant songs, rhythmic dancing, and radiant smiles. Their joy and admiration, especially for our Missions President and the team, were deeply moving. The sense of anticipation and honor they showed was the first of many reminders that God was in our midst.
+
+Historically, the missions team led by Bishop has been able to bring six months’ worth of medical supplies to aid the community. But in this year, through God’s provision and generous support, we were able to bring an entire year’s supply. That moment alone was a testament to the growth of our missions effort and the ongoing favor of God.
+
+As we journeyed to the town where we would serve, the warmest welcome imaginable awaited us. Dozens of children surrounded our bus, their voices lifted in song, their hands clapping, their faces beaming with excitement. Their love and honor for Bishop, First Lady, and the team brought tears to many of our eyes. As we walked onto the land and began greeting the families and ministry leaders, it was clear: we had stepped onto holy ground.
+
+The heart of our mission unfolded in one of the local churches where we staged our medical clinic. There, we attended to hundreds of medical cases, providing care, compassion, and the necessary medicines to those in need. I personally served in the pharmacy portion of the clinic and learned so much about the careful allocation of medications—an experience that deepened both my skill set and my spiritual insight. What struck me most was the dignity with which the people received every bandage, every pill, every word of prayer. It was as if Jesus Himself handed it to them.
+
+One of the highlights of this mission was being invited by Bishop to share the Gospel. It was an honor beyond words. As I stood before the people and preached the message of Jesus, we saw many hearts turn toward Him. Souls were saved. Lives were transformed. The Spirit of God moved effortlessly, softening hearts and drawing people to the cross.
+
+On our final full day, which happened to be Father’s Day, we gathered for a massive outdoor worship service alongside a large conglomerate of local churches and pastors. The hunger for God was electric. As Bishop Rhone stepped up to preach, the skies grew dark, and rain began to fall—no, pour. Yet something miraculous happened. Instead of scattering, the people huddled together under trees, eyes locked on Bishop, undeterred by the weather. They were hungry for the Word, and not even a torrential downpour could interrupt what God was doing.
+
+This mission was far more than an outreach—it was an exchange. An exchange of cultures, faith, love, and power. It was a reminder that when the people of God go out with open hands and hearts, Heaven meets Earth in beautiful, undeniable ways.
+
+Before this trip, I had never set foot in Africa, let alone participated in a medical mission. Now, I can say with full confidence that I’ve seen the face of Jesus in a child’s smile, in a mother’s grateful eyes, in the hands of a weary patient clutching medicine. I’ve felt the joy of serving beside a team that was not only skilled but compassionate, energetic, thoughtful, and deeply committed to each other’s well-being.
+
+If you’ve ever felt the nudge of God toward missions—go. There is a hunger in the nations that only the love, power, and provision of Jesus Christ can satisfy. And there is a hunger in the heart of every missionary—to see lives changed, healed, and redeemed by the Gospel.
+
+Bishop Rhone has faithfully created an environment where hunger meets fulfillment, where hearts collide with purpose, and where Jesus is made known. I am forever grateful to have been a part of this divine assignment.
+
+To God be the glory—for Mozambique, for our team, and for the future of missions.</p>
+        </div>
+
+        <div class="mt-5">
+            <button class="button toggleBtn" >READ MORE</button>
+        </div>
+
+    </div>
+
+</div>
+
+
+  <!-- card 3 -->
+<div class="p-5 border-2 rounded-3xl mt-7 md:mt-15 lg:mt-20">
+
+    <div class="[&_img]:h-full [&_img]:w-full [&_img]:rounded-3xl">
+        <img src="assets/images/Mason_Temple,_Church_of_God_in_Christ_Memphis,_Tennessee.png" alt=" A Life-Changing Mission to Mozambiqu">
+    </div>
+
+    <!-- content  -->
+    <div class="mt-5 [&_h3]:text-black [&_h3]:text-start">
+
+        <div  class="cardText overflow-hidden transition-all duration-1500 ease-in-out max-h-70">
+        <div class="py-4 md:py-7 lg:py-10">
+           
+        <h3> THE APRIL CALL HEARD AROUND THE WORLD </h3>
+        <h4>By: Superintendent Ketryn Anderson </h4>
+        </div>
+
+        <p >
+      In June of 2024, I had the privilege of experiencing something that will remain etched in my heart for a lifetime—a journey to Mozambique, Africa, as part of a powerful medical mission under the leadership of our beloved President of International Missions for the Church of God in Christ. Traveling alongside him, our gracious First Lady, and an extraordinary team of missionaries, I witnessed the hand of God moving mightily across the earth. Prior to this trip, I wrestled with being able to go. While our president was very open to the financial responsibility and the time to take care of it, I felt this strong nudging to go and be a part of the team. This nudge came during one of the interest meetings via Zoom. After hearing the testimonies of those who have previously gone, I knew that I was supposed to be involved in this moment. As a consequence, I’m proud to say the Lord made the way for me to go.
+
+Mozambique, known as the third poorest nation in the world, is a place where the hunger for healing, hope, and the Gospel is almost tangible. Out of our team of 20, half were missionaries from Brazil who serve under the President’s jurisdiction, and the others were faithful members of his local church in Pomona, California. Together, we formed a unified front of compassion, service, and Kingdom purpose.
+
+During the Church of God in Christ’s annual April Call Meeting, newly appointed President of COGIC World Missions, Bishop Terrance Rhone, delivered a passionate and unfiltered plea for global missions support that left an undeniable mark on the hearts of leaders, delegates, and congregants alike. His bold call for financial commitment came not just as an administrative necessity but as a spiritual summons to action — and the response was both immediate and overwhelming.<br> <br> 
+
+Taking the stage with fire and focus, Bishop Rhone began by declaring the urgency of the global mission field, emphasizing that the Gospel must be preached beyond the walls of our local sanctuaries. “We cannot afford to preach to ourselves while the world is perishing,” he proclaimed, his voice resounding through the historic Mason Temple and into thousands of homes streaming the session online. “If we believe this Gospel is the power of God unto salvation, then we must go, send, and support like never before.” The conviction in his tone stirred the audience to a standing ovation, and what followed was one of the most spirited moments of giving and unity the church has seen in recent memory. <br> <br> 
+
+COGIC World Missions currently maintains a presence in over 110 countries. Bishop Rhone took time to underscore that this global footprint represents more than geography—it reflects living, breathing communities that rely on the spiritual and practical support of the church. He spoke of villages in Africa where children walk miles to hear the Gospel, churches in South America built with minimal resources but overflowing with faith, and the need to support missionaries and pastors who are planting seeds in rugged terrain, both physically and spiritually. <br> <br> 
+
+Appointed to succeed a line of respected leaders in World Missions, Bishop Rhone brings with him years of international experience, a track record of pastoral excellence, and a vision that is as strategic as it is Spirit-led. During his address, he shared his outlook for the next chapter of COGIC’s global work — a chapter marked by deeper investment in leadership development, church planting, and humanitarian outreach. He aims to strengthen the existing infrastructure while expanding into unreached regions with intentionality and focus. <br> <br> 
+
+While his plan includes long-term initiatives, Bishop Rhone made it clear that none of this can happen without an immediate and generous financial response. He called on the entire church — from bishops to local members — to commit to giving more, doing more, and praying more. His message was clear: the mission field is ripe, but bringing the harvest in will take sacrifice and vision. The atmosphere in the room shifted as pastors began standing to pledge, women of the church brought forth offerings, and leaders laid commitments at the altar. It was more than emotional — it was covenantal. <br> <br> 
+
+Throughout his message, Bishop Rhone was careful to draw the connection between COGIC’s history and its future. He reminded the audience that the church was built on sacrifice, with early missionaries giving up everything to carry the message of holiness and salvation to people across the globe. That same spirit, he said, must now be reignited. With COGIC’s expanding global footprint, the church cannot afford to be silent or complacent in the face of war, poverty, spiritual hunger, and moral crisis. He framed this moment as a divine assignment: to bring light where there is darkness and hope where there is despair. <br> <br> 
+
+In his closing remarks, Bishop Rhone did not simply celebrate the crowd’s response—he challenged them. He called on every department, jurisdiction, and auxiliary to re-evaluate their role in the global work. He encouraged pastors to begin teaching missions in their churches again, not as a side ministry but as a core expression of the Gospel. He asked young people to consider whether their calling might lead them beyond national borders. He also urged business owners and professionals in the church to invest in missions with the same intentionality they would bring to any meaningful venture. <br> <br> 
+
+By the end of the session, it was clear that a new energy had been breathed into the church’s mission vision. Bishop Rhone’s passion, transparency, and authority had done more than communicate a need — they had rekindled a fire. Leaders left inspired. Delegates left committed. And most importantly, COGIC left reminded that its mission truly is to the nations. <br> <br> 
+
+The appointment of Bishop Terrance Rhone marks not only a transition of leadership but a defining moment in the future of World Missions. With a vision in his heart and fire in his voice, he has signaled that the church is ready to expand its reach and deepen its impact. As one elder in attendance put it, “This isn’t just about raising funds. This is about raising faith.” <br> <br> 
+
+And if the response at the April Call Meeting is any indication, COGIC is ready to answer that call — to give, to go, and to grow the Kingdom of God across the world. </p>
+        </div>
+
+        <div class="mt-5">
+            <button class="button toggleBtn" >READ MORE</button>
+        </div>
+
+    </div>
+
+</div>
+
+  
+  </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- news letter -->
+<section 
+    
+    data-aos="zoom-in" 
+        data-aos-duration="1500"
+    
+    class="w-full max-w-[1440px] mx-auto py-16 px-10 [&_h2]:mb-2 flex flex-col lg:[&_p]:w-3xl [&_p]:mb-8 items-center text-center justify-center">
+      <h2 class="  heading">CONNECT WITH US</h2>
+      <p >
+       Our COGIC World Missions newsletter provides updates on outreach mission opportunities. Submit your name and email address to receive our monthly newsletter. 
+      </p>
+      <form class="w-full max-w-4xl flex flex-col justify-center items-center">
+        <div class="newsletter flex flex-col md:flex-row w-full gap-2 mb-6">
+          <input type="text" placeholder="First Name" aria-label="First Name"   />
+          <input type="text" placeholder="Last Name" aria-label="Last name"  />
+          <input type="email" placeholder="Email Address" aria-label="Email Address" />
+        </div>
+        <button type="submit" class="btn">Subscribe Now</button>
+      </form>
+    </section>
+
+
+    <!-- Footer -->
+<footer class="bg-[#f7f7f7] py-12  ">
+  <div class="max-w-[1440px] mx-auto px-4 md:px-6 lg:px-12">
+  <div class="w-full  mx-auto grid grid-cols-1 md:grid-cols-5 gap-10">
+    
+    <!-- Logo & Description -->
+    <div class="md:col-span-2">
+      <div class="flex items-center mb-3">
+       
+        <img src="assets/images/logo.png" alt="COGIC World Missions Logo" class="h-22 w-auto mr-3">
+      </div>
+      <p class="footer-text">
+        COGIC World Missions exists to fulfill Christ's command to make disciples of all nations. Actively serving in 113 countries under Presiding Bishop J. Drew Sheard, the ministry encourages leaders at every level of the Church of God in Christ to renew their focus on global outreach. By addressing both spiritual growth and real-world challenges, the mission aims to deepen the church's global impact.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h5 class="heading ">Quick Links</h5>
+      <ul class="space-y-1 text-sm  text-black">
+        <li><a href="#" class="footer-link">Home</a></li>
+        <li><a href="#" class="footer-link">About</a></li>
+        <li><a href="#" class="footer-link">Leadership</a></li>
+        <li><a href="#" class="footer-link">Events</a></li>
+        <li><a href="#" class="footer-link">Online Training</a></li>
+      </ul>
+    </div>
+
+    <!-- Who We Are -->
+    <div>
+      <h5 class=" heading">Who We Are</h5>
+      <ul class="space-y-1 text-sm   text-black">
+        <li><a href="#" class="footer-link">Our History</a></li>
+        <li><a href="#" class="footer-link">Our Affiliation</a></li>
+        <li><a href="#" class="footer-link">COGIC</a></li>
+        <li><a href="#" class="footer-link">Statement of Faith</a></li>
+        <li><a href="#" class="footer-link">Executive Team</a></li>
+        <li><a href="#" class="footer-link">Executive Staff</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div>
+      <h5 class=" heading">Contact Us</h5>
+      <p class=" footer-text">
+        <span class="font-bold heading">COGIC World Missions</span><br>
+        938 Mason Street<br>
+        Memphis, TN 38126<br><br>
+        Tel: (901) 947-9316<br>
+        Cogicworldmissions@cogic.org
+      </p>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="copyright-text  ">
+    Copyright © 2024 TechChurch.io. All Rights Reserved.
+  </div>
+  </div>
+</footer>
+
+<script>
+  const buttons = document.getElementsByClassName("toggleBtn");
+  const texts = document.getElementsByClassName("cardText");
+
+  // Loop through each button
+  for (let i = 0; i < buttons.length; i++) {
+    let expanded = false;
+    buttons[i].addEventListener("click", function () {
+      expanded = !expanded;
+      if (expanded) {
+        texts[i].classList.remove("max-h-24");
+        texts[i].classList.add("max-h-[10000px]");
+        buttons[i].textContent = "READ LESS";
+      } else {
+        texts[i].classList.add("max-h-24");
+        texts[i].classList.remove("max-h-[10000px]");
+        buttons[i].textContent = "READ MORE";
+      }
+    });
+  }
+</script>
+  <script src="assets/aos.js"></script>
+  <script src="assets/script.js"></script>
+
+
+</body>
+</html>
