@@ -117,12 +117,12 @@
     <!-- content  -->
     <div class="mt-5 [&_h3]:text-black [&_h3]:text-start">
 
-        <div  class="cardText overflow-hidden transition-all duration-2500 ease-in-out max-h-70">
+       
         <div class="py-4 md:py-7 lg:py-10">
         <h3>A Different Kind of Leader</h3>
         <h4>By: Elder Carl Sims </h4>
         </div>
-
+ <div  class="cardText overflow-hidden transition-all duration-1500 ease-in-out max-h-34 lg:max-h-32">
         <div class="space-y-2" >
          <p> In June 2019, I had the opportunity to go on my first mission trip to Mozambique, and it changed my life in ways I still carry with me today. Our team handed out medications, distributed vitamins, and prayed for children and families who had traveled miles just to receive basic care. What stood out to me most wasn’t just the need—but the overwhelming gratitude of the people. With every vitamin or prayer, they responded with such joy and humility. Even though we were the ones giving, I walked away feeling like I was the one who had received the most.</p> 
 
@@ -159,12 +159,12 @@
     <!-- content  -->
     <div class="mt-5 [&_h3]:text-black [&_h3]:text-start">
 
-        <div  class="cardText overflow-hidden transition-all duration-2500 ease-in-out max-h-70">
+       
         <div class="py-4 md:py-7 lg:py-10">
         <h3>Answering the Call: A Life-Changing Mission to Mozambique</h3>
         <h4>By: Elder Gregory L. McNair, Jr. </h4>
         </div>
-
+ <div  class="cardText overflow-hidden transition-all duration-1500 ease-in-out max-h-34 lg:max-h-32">
         <div  class="space-y-2">
 <p>      In June of 2024, I had the privilege of experiencing something that will remain etched in my heart for a lifetime—a journey to Mozambique, Africa, as part of a powerful medical mission under the leadership of our beloved President of International Missions for the Church of God in Christ. Traveling alongside him, our gracious First Lady, and an extraordinary team of missionaries, I witnessed the hand of God moving mightily across the earth. Prior to this trip, I wrestled with being able to go. While our president was very open to the financial responsibility and the time to take care of it, I felt this strong nudging to go and be a part of the team. This nudge came during one of the interest meetings via Zoom. After hearing the testimonies of those who have previously gone, I knew that I was supposed to be involved in this moment. As a consequence, I’m proud to say the Lord made the way for me to go.</p>
 
@@ -192,8 +192,8 @@
 
 <p>To God be the glory—for Mozambique, for our team, and for the future of missions.</p>
 </div>
-        </div>
-
+        
+</div>
         <div class="mt-5">
             <button class="button toggleBtn" >READ MORE</button>
         </div>
@@ -213,13 +213,14 @@
     <!-- content  -->
     <div class="mt-5 [&_h3]:text-black [&_h3]:text-start">
 
-        <div  class="cardText overflow-hidden transition-all duration-2500 ease-in-out max-h-70">
+       
         <div class="py-4 md:py-7 lg:py-10">
            
         <h3> THE APRIL CALL HEARD AROUND THE WORLD </h3>
         <h4>By: Superintendent Ketryn Anderson </h4>
         </div>
 
+ <div  class="cardText overflow-hidden transition-all duration-1500 ease-in-out max-h-34 lg:max-h-32">
         <div class="space-y-2" >
      <p> In June of 2024, I had the privilege of experiencing something that will remain etched in my heart for a lifetime—a journey to Mozambique, Africa, as part of a powerful medical mission under the leadership of our beloved President of International Missions for the Church of God in Christ. Traveling alongside him, our gracious First Lady, and an extraordinary team of missionaries, I witnessed the hand of God moving mightily across the earth. Prior to this trip, I wrestled with being able to go. While our president was very open to the financial responsibility and the time to take care of it, I felt this strong nudging to go and be a part of the team. This nudge came during one of the interest meetings via Zoom. After hearing the testimonies of those who have previously gone, I knew that I was supposed to be involved in this moment. As a consequence, I’m proud to say the Lord made the way for me to go.</p>
 
@@ -348,26 +349,39 @@
 </footer>
 
 <script>
-  const buttons = document.getElementsByClassName("toggleBtn");
-  const texts = document.getElementsByClassName("cardText");
+  const buttons = document.querySelectorAll(".toggleBtn");
+  const texts = document.querySelectorAll(".cardText");
 
-  // Loop through each button
-  for (let i = 0; i < buttons.length; i++) {
+  buttons.forEach((button, i) => {
     let expanded = false;
-    buttons[i].addEventListener("click", function () {
+
+    button.addEventListener("click", () => {
+      const text = texts[i];
       expanded = !expanded;
+
       if (expanded) {
-        texts[i].classList.remove("max-h-24");
-        texts[i].classList.add("max-h-[10000px]");
-        buttons[i].textContent = "READ LESS";
+        // expand smoothly
+        const fullHeight = text.scrollHeight + "px";
+        text.style.maxHeight = fullHeight;
+        button.textContent = "READ LESS";
       } else {
-        texts[i].classList.add("max-h-24");
-        texts[i].classList.remove("max-h-[10000px]");
-        buttons[i].textContent = "READ MORE";
+        // collapse smoothly with responsive height
+        const screenWidth = window.innerWidth;
+        const collapsedHeight = screenWidth >= 1024 ? "8.1rem" : "8.5rem";
+        text.style.maxHeight = collapsedHeight;
+        button.textContent = "READ MORE";
       }
     });
-  }
+
+    // Optional: handle resizing while expanded
+    window.addEventListener("resize", () => {
+      if (expanded) {
+        text.style.maxHeight = text.scrollHeight + "px";
+      }
+    });
+  });
 </script>
+
   <script src="assets/aos.js"></script>
   <script src="assets/script.js"></script>
 

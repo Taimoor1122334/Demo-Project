@@ -210,6 +210,9 @@
   }
 }
 @layer utilities {
+  .collapse {
+    visibility: collapse;
+  }
   .visible {
     visibility: visible;
   }
@@ -425,11 +428,35 @@
   .max-h-0 {
     max-height: calc(var(--spacing) * 0);
   }
+  .max-h-3 {
+    max-height: calc(var(--spacing) * 3);
+  }
   .max-h-24 {
     max-height: calc(var(--spacing) * 24);
   }
+  .max-h-32 {
+    max-height: calc(var(--spacing) * 32);
+  }
+  .max-h-34 {
+    max-height: calc(var(--spacing) * 34);
+  }
+  .max-h-35 {
+    max-height: calc(var(--spacing) * 35);
+  }
   .max-h-70 {
     max-height: calc(var(--spacing) * 70);
+  }
+  .max-h-73 {
+    max-height: calc(var(--spacing) * 73);
+  }
+  .max-h-73\.5 {
+    max-height: calc(var(--spacing) * 73.5);
+  }
+  .max-h-74 {
+    max-height: calc(var(--spacing) * 74);
+  }
+  .max-h-75 {
+    max-height: calc(var(--spacing) * 75);
   }
   .max-h-\[10000px\] {
     max-height: 10000px;
@@ -950,6 +977,11 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
+  .transition-\[max-height\] {
+    transition-property: max-height;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
   .transition-all {
     transition-property: all;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -976,6 +1008,10 @@
   .duration-500 {
     --tw-duration: 500ms;
     transition-duration: 500ms;
+  }
+  .duration-700 {
+    --tw-duration: 700ms;
+    transition-duration: 700ms;
   }
   .duration-1000 {
     --tw-duration: 1000ms;
@@ -1361,6 +1397,16 @@
   .lg\:h-\[650px\] {
     @media (width >= 64rem) {
       height: 650px;
+    }
+  }
+  .lg\:max-h-32 {
+    @media (width >= 64rem) {
+      max-height: calc(var(--spacing) * 32);
+    }
+  }
+  .lg\:max-h-70 {
+    @media (width >= 64rem) {
+      max-height: calc(var(--spacing) * 70);
     }
   }
   .lg\:w-\[40\%\] {
