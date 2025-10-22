@@ -49,45 +49,35 @@ document.querySelectorAll('.mobile-link').forEach(link => {
 (function initCarousel() {
   const carousel = document.getElementById('carousel');
   const progress = document.getElementById('progress');
-  const title = document.getElementById('title');
-  const desc = document.getElementById('desc');
-  if (!(carousel && title && desc && progress)) return;
-
-  const slides = [
-    {
-      title: 'ANGOLA',
-      desc: 'Prepare for a life-changing mission as we journey through the heart of Angola! Our dedicated team will be serving in vibrant communities like Luanda, Huambo, Benguela, Lubango, and Malanje, sharing love, hope, and the message of faith.',
-    },
-    {
-      title: 'PHILIPPINES',
-      desc: 'Join us in the beautiful Philippines, working alongside local communities to bring hope, joy, and practical help through faith-driven outreach programs in rural and urban areas.',
-    },
-    {
-      title: 'TANZANIA',
-      desc: 'Experience the heart of Africa in Tanzania. Our mission will focus on education, medical aid, and spiritual growth in cities and villages across the region.',
-    },
-  ];
+  const textSlides = document.querySelectorAll('.slide-text');
+  if (!(carousel && progress && textSlides.length)) return;
 
   let currentIndex = 0;
+  const totalSlides = textSlides.length;
 
   function updateContent() {
-    title.textContent = slides[currentIndex].title;
-    desc.textContent = slides[currentIndex].desc;
+    // update image position
     carousel.style.transform = `translateX(-${currentIndex * 50}%)`;
-    progress.style.width = `${((currentIndex + 1) / slides.length) * 100}%`;
+    progress.style.width = `${((currentIndex + 1) / totalSlides) * 100}%`;
+
+    // update visible text
+    textSlides.forEach((text, index) => {
+      text.classList.toggle('hidden', index !== currentIndex);
+      text.classList.toggle('active', index === currentIndex);
+    });
   }
 
-  window.slideRight = function slideRight() {
-    currentIndex = (currentIndex + 1) % slides.length;
+  window.slideRight = function () {
+    currentIndex = (currentIndex + 1) % totalSlides;
     updateContent();
   };
 
-  window.slideLeft = function slideLeft() {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  window.slideLeft = function () {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
     updateContent();
   };
 
-  window.setActive = function setActive(clickedBtn) {
+  window.setActive = function (clickedBtn) {
     const buttons = document.querySelectorAll('.arrow-btn');
     buttons.forEach(btn => {
       const svg = btn.querySelector('svg path');
@@ -104,13 +94,16 @@ document.querySelectorAll('.mobile-link').forEach(link => {
   };
 
   updateContent();
+
+  // ✅ Make right arrow active by default
   window.addEventListener('load', () => {
-    const defaultBtn = document.querySelector('.arrow-btn.rotate-180');
-    if (defaultBtn && typeof window.setActive === 'function') {
-      window.setActive(defaultBtn);
+    const rightArrow = document.querySelector('.arrow-btn.rotate-180');
+    if (rightArrow && typeof window.setActive === 'function') {
+      window.setActive(rightArrow);
     }
   });
 })();
+
 
 // Navbar Fixed on Scroll
 window.addEventListener('scroll', function () {

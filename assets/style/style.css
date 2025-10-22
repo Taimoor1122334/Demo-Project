@@ -16,7 +16,7 @@ html{
     @apply  uppercase  text-2xl md:text-4xl lg:text-[3rem] xl:text-[3.3rem]  text-center
   }
   h2{
-    @apply text-2xl  md:text-4xl lg:text-[3rem] xl:text-[3.3rem]  font-bold 
+    @apply text-2xl  md:text-4xl lg:text-[3rem] xl:text-[3.3rem]  font-bold uppercase
   }
   .imgSliders-heading{
     @apply text-center text-white text-2xl md:text-5xl font-bold uppercase
@@ -106,12 +106,13 @@ html{
 .cardText{
   @apply overflow-hidden transition-all duration-1500 ease-in-out max-h-34 lg:max-h-32 space-y-2
 }
-
+#menuToggleBtn{
+  @apply cursor-pointer
 
 }
- .active {
-    color: #21B803 !important;
-  }
+
+}
+
      
 body{
  background-color: #F2F2F2;
@@ -161,3 +162,6 @@ body{
         }
 
 
+[id] {
+  scroll-margin-top: 200px;
+}
