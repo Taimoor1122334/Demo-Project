@@ -1932,6 +1932,48 @@ body {
   position: relative;
   z-index: 1;
 }
+.accordion-item {
+  border: 2px solid gray;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+.dropdown-icon svg {
+  margin-left: 10px;
+}
+.accordion-header {
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  font-weight: 500;
+  justify-content: start;
+  align-items: center;
+  padding: 14px 18px;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+.accordion-header:hover {
+  background-color: #f8f8f8;
+}
+.dropdown-icon svg {
+  transition: transform 0.3s ease;
+}
+.accordion-item.active .dropdown-icon svg {
+  transform: rotate(180deg);
+}
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 18px;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+.accordion-item.active .accordion-content {
+  min-height: 200px;
+  padding: 10px 18px 18px;
+}
 @property --tw-scale-x {
   syntax: "*";
   inherits: false;
