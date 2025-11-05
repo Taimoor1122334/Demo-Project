@@ -1,4 +1,4 @@
-
+ /* npx @tailwindcss/cli -i ./assets/style/style.css -o ./assets/style/output.css --watch */
 
 
 @import "tailwindcss";
@@ -168,10 +168,21 @@ body{
 .map-wrapper {
   position: relative;
   width: 100%;
-  height: 600px;
+  height: 800px;
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  .map-iframe {
+    height: 400px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .map-iframe {
+    height: 600px;
+  }
+}
 .white-label {
   position: absolute;
   top: 0;
