@@ -1971,7 +1971,7 @@ body {
   transition: max-height 0.4s ease, padding 0.3s ease;
 }
 .accordion-item.active .accordion-content {
-  min-height: 200px;
+  min-height: 150px;
   padding: 10px 18px 18px;
 }
 @property --tw-scale-x {

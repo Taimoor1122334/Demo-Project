@@ -256,6 +256,8 @@ body{
 
 /* When opened */
 .accordion-item.active .accordion-content {
-  min-height: 200px; /* enough for text */
+  min-height: 150px; /* enough for text */
   padding: 10px 18px 18px;
 }
+
+

@@ -494,24 +494,35 @@ data-aos="zoom-in"
   </div>
 </footer>
 <script>
-  function toggleDropdown(button) {
-      const item = button.parentElement;
-      const content = item.querySelector(".accordion-content");
-      const isActive = item.classList.contains("active");
+  document.querySelectorAll('.accordion-header').forEach(header => {
+  header.addEventListener('click', () => {
+    const item = header.parentElement;
+    const content = item.querySelector('.accordion-content');
 
-      // Close all others
-      document.querySelectorAll(".accordion-item").forEach((el) => {
-        el.classList.remove("active");
-        const innerContent = el.querySelector(".accordion-content");
-        innerContent.style.height = 0;
+    if (item.classList.contains('active')) {
+      // Closing
+      content.style.maxHeight = content.scrollHeight + 'px';
+      content.offsetHeight; // force repaint
+      content.style.maxHeight = '0';
+      item.classList.remove('active');
+    } else {
+      // Closing others
+      document.querySelectorAll('.accordion-item').forEach(i => {
+        if (i !== item) {
+          i.classList.remove('active');
+          i.querySelector('.accordion-content').style.maxHeight = '0';
+        }
       });
 
-      // If it was not active, open it
-      if (!isActive) {
-        item.classList.add("active");
-        content.style.height = content.scrollHeight + "px";
-      }
+      // Opening current one
+      item.classList.add('active');
+      content.style.maxHeight = '0';
+      content.offsetHeight; // force browser to register transition start
+      content.style.maxHeight = content.scrollHeight + 'px';
     }
+  });
+});
+
 </script>
   <script src="assets/aos.js"></script>
   <script src="assets/script.js"></script>
